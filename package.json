@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "svelte-kit dev",
+    "local-backend": "npx netlify-cms-proxy-server",
     "build": "svelte-kit build",
     "preview": "svelte-kit preview",
     "lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",

@@ -1,0 +1,26 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+media_folder: static
+collections:
+  - name: eruvStatus
+    label: Eruv Status
+    files:
+      - name: statusUpdater
+        label: Update Status
+        file: src/lib/eruvStatus.json
+        fields:
+          - name: status
+            widget: boolean
+            label: Status
+            default: true
+            hint: Toggle On if the Eruv is UP; otherwise toggle it OFF
+          - name: lastUpdated
+            widget: datetime
+            label: Last Checked
+            hint: When the eruv was last checked
+            format: MMMM D, YYYY
+            date_format: MMMM D, YYYY
+            time_format: false
+              
+      
