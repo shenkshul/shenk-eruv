@@ -1,11 +1,11 @@
 <script context="module">
     // your script goes here
     import Status from '$lib/status.svelte';
-    export let status, date;
+    import {lastUpdated, status} from '$lib/eruvStatus.json';
 </script>
 
 <h1>
-    The Eruv is <Status {status} /> as of {date}.
+    The Eruv is <Status {status} /> as of {lastUpdated}.
 </h1>
 
 <style>
