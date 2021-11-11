@@ -1,25 +1,38 @@
 <script>
+	import dayjs from 'dayjs';
+	import customParseFormat from 'dayjs/plugin/customParseFormat';
+	import {
+		myzmanimFreeVersionEndpoint,
+		yuzmanimDataEndpoint,
+        hebcalDataEndpoint,
+        hebcalParameterBase,
+        washingtonHeightsGeonameId,
+		latitude,
+		longitude,
+		timezone
+	} from '$lib/constants.js';
+
+	dayjs.extend(customParseFormat);
+
 	const second = 1000;
 	const minute = second * 60;
 
 	/**
 	 *  Get a date object from an HTML time input element
-	 * @param {string} timeVal - Time in hour:minute:second format, e.g. 13:04:10 for 10 seconds after 1:04 PM
+	 * @param {string} timeVal - Time in hour:minute:second format or hour:minute:second:AM format, e.g. 13:04:10 for 10 seconds after 1:04 PM
 	 */
 	function getDateFromTime(timeVal) {
-		const [hour, minute, second] = timeVal.split(':');
+		const date = dayjs(timeVal, ['HH:mm', 'h:mm:ss:A'], true);
 
-		const d = new Date();
-		d.setHours(hour);
-		d.setMinutes(minute);
-		d.setSeconds(second);
-		return d;
+		return date.toDate();
 	}
 
 	let candleLightingTime;
 	let havdalaTime;
 	let shabbosShkia;
 	let earlyMinchaTime;
+    let fridayDate;
+	let shabbosDate;
 
 	$: candleLighting = {
 		value: candleLightingTime ? getDateFromTime(candleLightingTime) : null,
@@ -27,7 +40,9 @@
 	};
 
 	$: fridayMincha = {
-		value: candleLighting.value ? new Date(candleLighting?.value?.getTime() + minute * 5) : null,
+		value: candleLighting.value
+			? dayjs(candleLighting?.value?.getTime()).add(5, 'minute').toDate()
+			: null,
 		label: 'Friday mincha'
 	};
 
@@ -45,7 +60,7 @@
 		label: 'Havdala'
 	};
 	$: shabbosMaariv = {
-		value: havdala?.value ? new Date(havdala?.value?.getTime() - 11 * minute) : null,
+		value: shabbosShkia ? dayjs(getDateFromTime(shabbosShkia)).add(40, 'minute').toDate() : null,
 		label: 'Shabbos maariv'
 	};
 
@@ -56,19 +71,19 @@
 	<div id="editSection">
 		<label for="">
 			Candle Lighting:
-			<input type="time" step="1" bind:value={candleLightingTime} />
+			<input type="time" bind:value={candleLightingTime} />
 		</label>
 		<label for="">
 			Havdala:
-			<input type="time" step="1" bind:value={havdalaTime} />
+			<input type="time" bind:value={havdalaTime} />
 		</label>
 		<label for="">
 			Shabbos Mincha Gedola:
-			<input type="time" step="1" bind:value={earlyMinchaTime} />
+			<input type="time" bind:value={earlyMinchaTime} />
 		</label>
 		<label for="">
 			Shabbos Shkia:
-			<input type="time" step="1" bind:value={shabbosShkia} />
+			<input type="time" bind:value={shabbosShkia} />
 		</label>
 	</div>
 
