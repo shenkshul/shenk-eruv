@@ -4,9 +4,9 @@
 	import {
 		myzmanimFreeVersionEndpoint,
 		yuzmanimDataEndpoint,
-        hebcalDataEndpoint,
-        hebcalParameterBase,
-        washingtonHeightsGeonameId,
+		hebcalDataEndpoint,
+		hebcalParameterBase,
+		washingtonHeightsGeonameId,
 		latitude,
 		longitude,
 		timezone
@@ -30,8 +30,8 @@
 	let candleLightingTime;
 	let havdalaTime;
 	let shabbosShkia;
-	let earlyMinchaTime;
-    let fridayDate;
+	let earlyMinchaTime = '14:00';
+	let fridayDate;
 	let shabbosDate;
 
 	$: candleLighting = {
@@ -52,11 +52,11 @@
 	};
 	$: earlyMincha = {
 		value: earlyMinchaTime ? getDateFromTime(earlyMinchaTime) : null,
-		label: 'Early mincha'
+		label: 'Early mincha (Winter)'
 	};
 
 	$: havdala = {
-		value: havdalaTime ? getDateFromTime(havdalaTime) : null,
+		value: shabbosShkia ? dayjs(getDateFromTime(shabbosShkia)).add(51, 'minute').toDate() : null,
 		label: 'Havdala'
 	};
 	$: shabbosMaariv = {
@@ -67,20 +67,24 @@
 	$: zmanim = [candleLighting, fridayMincha, earlyMincha, lateMincha, havdala, shabbosMaariv];
 </script>
 
+<h1>Shenk Shabbos Zmanim calculator</h1>
+
+<p>
+	Instructions: Fill out the inputs on the left with the values from <a
+		href="https://www.yuzmanim.com/zmanim">YU Zmanim</a
+	> and the resulting zmanim will display on the right
+</p>
+
 <div id="content">
 	<div id="editSection">
 		<label for="">
 			Candle Lighting:
 			<input type="time" bind:value={candleLightingTime} />
 		</label>
-		<label for="">
+		<!-- <label for="">
 			Havdala:
 			<input type="time" bind:value={havdalaTime} />
-		</label>
-		<label for="">
-			Shabbos Mincha Gedola:
-			<input type="time" bind:value={earlyMinchaTime} />
-		</label>
+		</label> -->
 		<label for="">
 			Shabbos Shkia:
 			<input type="time" bind:value={shabbosShkia} />
