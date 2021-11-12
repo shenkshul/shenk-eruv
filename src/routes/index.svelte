@@ -6,6 +6,10 @@
 	import { lastUpdated, status } from '$lib/eruvStatus.json';
 </script>
 
+<svelte:head>
+	<title>Shenk Eruv Status</title>
+</svelte:head>
+
 <h1>
 	The Eruv is <Status {status} /> as of {lastUpdated}.
 </h1>

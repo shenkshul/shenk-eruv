@@ -67,6 +67,10 @@
 	$: zmanim = [candleLighting, fridayMincha, earlyMincha, lateMincha, havdala, shabbosMaariv];
 </script>
 
+<svelte:head>
+	<title>Shenk Shabbos Zmanim calculator</title>
+</svelte:head>
+
 <h1>Shenk Shabbos Zmanim calculator</h1>
 
 <p>
