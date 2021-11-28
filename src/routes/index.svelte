@@ -2,8 +2,27 @@
 	export const router = false;
 	export const hydrate = false;
 
+	let lastUpdated, status;
+
 	import Status from '$lib/status.svelte';
-	import { lastUpdated, status } from '$lib/eruvStatus.json';
+	// import { lastUpdated, status } from '$lib/eruvStatus.json';
+
+		/** @type {import('@sveltejs/kit').Load} */
+		export async function load({ page, fetch, session, stuff }) {
+		const url = `/status.json`;
+		const res = await fetch(url);
+
+		if (res.ok) {
+			const data = await res.json();
+			status = data.status;
+			lastUpdated = data.lastUpdated;
+			return {
+				body: {
+					status, lastUpdated
+				}
+			}
+		}
+	}
 </script>
 
 <svelte:head>
