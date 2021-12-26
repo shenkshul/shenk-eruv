@@ -1,0 +1,167 @@
+{
+  "Sunday": {
+    "Shacharis": [
+      {
+        "enabled": true,
+        "startTime": "7:30 AM"
+      },
+      {
+        "enabled": true,
+        "startTime": "8:30 AM"
+      },
+      {
+        "enabled": true,
+        "startTime": "9:15 AM"
+      }
+    ],
+    "Mincha/Maariv": [
+      {
+        "enabled": true,
+        "basedOnShkia": true,
+        "startTime": "8:30 AM"
+      }
+    ],
+    "Maariv": [
+      {
+        "enabled": true,
+        "startTime": "10:00 PM"
+      }
+    ]
+  },
+  "Monday": {
+    "Shacharis": [
+      {
+        "enabled": true,
+        "startTime": "6:30 AM"
+      },
+      {
+        "enabled": true,
+        "startTime": "7:30 AM"
+      },
+      {
+        "enabled": true,
+        "startTime": "8:30 AM"
+      }
+    ],
+    "Mincha/Maariv": [
+      {
+        "enabled": true,
+        "basedOnShkia": true,
+        "startTime": "8:30 AM"
+      }
+    ],
+    "Maariv": [
+      {
+        "enabled": true,
+        "startTime": "10:00 PM"
+      }
+    ]
+  },
+  "Tuesday": {
+    "Shacharis": [
+      {
+        "enabled": true,
+        "startTime": "6:30 AM"
+      },
+      {
+        "enabled": true,
+        "startTime": "7:30 AM"
+      },
+      {
+        "enabled": true,
+        "startTime": "8:30 AM"
+      }
+    ],
+    "Mincha/Maariv": [
+      {
+        "enabled": true,
+        "basedOnShkia": true,
+        "startTime": "8:30 AM"
+      }
+    ],
+    "Maariv": [
+      {
+        "enabled": true,
+        "startTime": "10:00 PM"
+      }
+    ]
+  },
+  "Wednesday": {
+    "Shacharis": [
+      {
+        "enabled": true,
+        "startTime": "6:30 AM"
+      },
+      {
+        "enabled": true,
+        "startTime": "7:30 AM"
+      },
+      {
+        "enabled": true,
+        "startTime": "8:30 AM"
+      }
+    ],
+    "Mincha/Maariv": [
+      {
+        "enabled": true,
+        "basedOnShkia": true,
+        "startTime": "8:30 AM"
+      }
+    ],
+    "Maariv": [
+      {
+        "enabled": true,
+        "startTime": "10:00 PM"
+      }
+    ]
+  },
+  "Thursday": {
+    "Shacharis": [
+      {
+        "enabled": true,
+        "startTime": "6:30 AM"
+      },
+      {
+        "enabled": true,
+        "startTime": "7:30 AM"
+      },
+      {
+        "enabled": true,
+        "startTime": "8:30 AM"
+      }
+    ],
+    "Mincha/Maariv": [
+      {
+        "enabled": true,
+        "basedOnShkia": true,
+        "startTime": "8:30 AM"
+      }
+    ],
+    "Maariv": [
+      {
+        "enabled": true,
+        "startTime": "10:00 PM"
+      }
+    ]
+  },
+  "Friday": {
+    "Shacharis": [
+      {
+        "enabled": true,
+        "startTime": "6:30 AM"
+      },
+      {
+        "enabled": true,
+        "startTime": "7:30 AM"
+      },
+      {
+        "enabled": true,
+        "startTime": "8:30 AM"
+      },
+      {
+        "enabled": true,
+        "startTime": "9:15 AM"
+      }
+    ]
+  }
+}

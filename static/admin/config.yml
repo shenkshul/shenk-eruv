@@ -22,5 +22,160 @@ collections:
             format: MMMM D, YYYY
             date_format: MMMM D, YYYY
             time_format: false
-              
-      
+  - name: weekdayMinyanim
+    label: Minyanim for the Week
+    files:
+      - name: weekdayMinyanimUpdater
+        label: Minyan Times
+        file: src/lib/minyanim.json
+        fields:
+          - name: Sunday
+            widget: object
+            label: Sunday Minyanim
+            collapsed: false
+            fields:
+              - label: Shacharis
+                name: shacharis
+                collapsed: false
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: true
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false
+          - name: Monday
+            widget: object
+            label: Monday Minyanim
+            collapsed: false
+            fields:
+              - label: Shacharis
+                name: shacharis
+                collapsed: false
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: true
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false
+          - name: Tuesday
+            widget: object
+            label: Tuesday Minyanim
+            collapsed: false
+            fields:
+              - label: Shacharis
+                name: shacharis
+                collapsed: false
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: true
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false
+          - name: Wednesday
+            widget: object
+            label: Wednesday Minyanim
+            collapsed: false
+            fields:
+              - label: Shacharis
+                name: shacharis
+                collapsed: false
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: true
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false
+          - name: Thursday
+            widget: object
+            label: Thursday Minyanim
+            collapsed: false
+            fields:
+              - label: Shacharis
+                name: shacharis
+                collapsed: false
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: true
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false
+          - name: Friday
+            widget: object
+            label: Friday Minyanim
+            collapsed: false
+            fields:
+              - label: Shacharis
+                name: shacharis
+                collapsed: false
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: true
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false

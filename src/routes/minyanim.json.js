@@ -1,10 +1,9 @@
-import { lastUpdated, status } from '$lib/eruvStatus.json';
+import * as minyanim from '$lib/minyanim.json';
 
 export async function get() {
 	return {
 		body: {
-			lastUpdated,
-			status
+			minyanim
 		}
 	};
 }
@@ -13,8 +12,7 @@ export async function get() {
 export async function load() {
 	return {
 		body: {
-			lastUpdated,
-			status
+			minyanim
 		}
 	};
 }
