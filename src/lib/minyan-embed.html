@@ -1,0 +1,399 @@
+<script src="https://unpkg.com/kosher-zmanim@0.8.2/dist/kosher-zmanim.min.js"></script>
+
+<div id="zmanim"></div>
+
+<style>
+	#zmanim {
+		font-family: Arial, Helvetica, sans-serif;
+		margin-bottom: 1em;
+	}
+
+	#zmanim ol {
+		margin-bottom: 1em;
+	}
+
+	#zmanim ol li {
+		list-style: none;
+	}
+</style>
+
+<script>
+	const getZmanimJson = KosherZmanim.getZmanimJson;
+
+	const minyanim = {
+		Sunday: {
+			Shacharis: [
+				{
+					enabled: true,
+					startTime: '7:30 AM'
+				},
+				{
+					enabled: true,
+					startTime: '8:30 AM'
+				},
+				{
+					enabled: true,
+					startTime: '9:15 AM'
+				}
+			],
+			'Mincha/Maariv': [
+				{
+					enabled: true,
+					basedOnShkia: true,
+					minutesBeforeShkia: 15,
+					startTime: '8:30 AM'
+				}
+			],
+			Maariv: [
+				{
+					enabled: true,
+					startTime: '10:00 PM'
+				}
+			]
+		},
+		Monday: {
+			Shacharis: [
+				{
+					enabled: true,
+					startTime: '6:30 AM',
+					minutesEarlierOnRoshChodesh: 15
+				},
+				{
+					enabled: true,
+					startTime: '7:30 AM'
+				},
+				{
+					enabled: true,
+					startTime: '8:30 AM'
+				}
+			],
+			'Mincha/Maariv': [
+				{
+					enabled: true,
+					basedOnShkia: true,
+					minutesBeforeShkia: 15,
+					startTime: '8:30 AM'
+				}
+			],
+			Maariv: [
+				{
+					enabled: true,
+					startTime: '10:00 PM'
+				}
+			]
+		},
+		Tuesday: {
+			Shacharis: [
+				{
+					enabled: true,
+					startTime: '6:30 AM',
+					minutesEarlierOnRoshChodesh: 15
+				},
+				{
+					enabled: true,
+					startTime: '7:30 AM'
+				},
+				{
+					enabled: true,
+					startTime: '8:30 AM'
+				}
+			],
+			'Mincha/Maariv': [
+				{
+					enabled: true,
+					basedOnShkia: true,
+					minutesBeforeShkia: 15,
+					startTime: '8:30 AM'
+				}
+			],
+			Maariv: [
+				{
+					enabled: true,
+					startTime: '10:00 PM'
+				}
+			]
+		},
+		Wednesday: {
+			Shacharis: [
+				{
+					enabled: true,
+					startTime: '6:30 AM',
+					minutesEarlierOnRoshChodesh: 15
+				},
+				{
+					enabled: true,
+					startTime: '7:30 AM'
+				},
+				{
+					enabled: true,
+					startTime: '8:30 AM'
+				}
+			],
+			'Mincha/Maariv': [
+				{
+					enabled: true,
+					basedOnShkia: true,
+					minutesBeforeShkia: 15,
+					startTime: '8:30 AM'
+				}
+			],
+			Maariv: [
+				{
+					enabled: true,
+					startTime: '10:00 PM'
+				}
+			]
+		},
+		Thursday: {
+			Shacharis: [
+				{
+					enabled: true,
+					startTime: '6:30 AM',
+					minutesEarlierOnRoshChodesh: 15
+				},
+				{
+					enabled: true,
+					startTime: '7:30 AM'
+				},
+				{
+					enabled: true,
+					startTime: '8:30 AM'
+				}
+			],
+			'Mincha/Maariv': [
+				{
+					enabled: true,
+					basedOnShkia: true,
+					minutesBeforeShkia: 15,
+					startTime: '8:30 AM'
+				}
+			],
+			Maariv: [
+				{
+					enabled: true,
+					startTime: '10:00 PM'
+				}
+			]
+		},
+		Friday: {
+			Shacharis: [
+				{
+					enabled: false,
+					startTime: '6:30 AM',
+					minutesEarlierOnRoshChodesh: 15
+				},
+				{
+					enabled: true,
+					startTime: '7:30 AM'
+				},
+				{
+					enabled: true,
+					startTime: '8:30 AM'
+				},
+				{
+					enabled: true,
+					startTime: '9:15 AM'
+				}
+			],
+			Candles: [
+				{
+					enabled: true,
+					candles: true
+				}
+			],
+			'Mincha/Kabalat Shabbat': [
+				{
+					enabled: true,
+					basedOnCandles: true
+				}
+			]
+		},
+		Shabbos: {
+			Shacharis: [
+				{
+					enabled: true,
+					startTime: '7:10 AM'
+				},
+				{
+					enabled: true,
+					startTime: '9:00 AM'
+				}
+			],
+			Mincha: [
+				{
+					enabled: true,
+					startTime: '2:00 PM'
+				},
+				{
+					enabled: true,
+					basedOnShkia: true,
+					minutesBeforeShkia: 40
+				}
+			],
+			Maariv: [
+				{
+					enabled: true,
+					basedOnShkia: true,
+					minutesBeforeShkia: -40
+				}
+			],
+			Havdala: [
+				{
+					enabled: true,
+					basedOnShkia: true,
+					minutesBeforeShkia: -51
+				}
+			]
+		}
+	};
+
+	const latitude = 40.85136738947894;
+	const longitude = -73.93145186094495;
+	const timezone = 'America/New_York';
+
+	const baseKosherZmanimObject = {
+		timeZoneId: timezone,
+		latitude,
+		longitude
+	};
+	const zmanimObj = { ...baseKosherZmanimObject };
+
+	/**
+	 *
+	 * @param {Date} date
+	 */
+	const getDisplayTime = (date) =>
+		new Date(date).toLocaleTimeString('en-us', {
+			timeStyle: 'short'
+		});
+
+	/**
+	 *
+	 * @param {string} date
+	 * @param {number} numberOfMinutes
+	 */
+	const getMinutesBeforeDate = (date, numberOfMinutes) =>
+		new Date(new Date(date).getTime() - 1_000 * 60 * numberOfMinutes);
+	/**
+	 *
+	 * @param {string} date
+	 */
+	const getFiveMinutesAfterCandles = (date) => new Date(new Date(date).getTime() + 1_000 * 60 * 5);
+
+	function convertTime12to24(d, time12h) {
+		const [time, modifier] = time12h.split(' ');
+
+		let [hours, minutes] = time.split(':');
+
+		if (hours === '12') {
+			hours = '00';
+		}
+
+		if (modifier === 'PM') {
+			hours = parseInt(hours, 10) + 12;
+		}
+
+		d.setHours(hours);
+		d.setMinutes(minutes);
+
+		return d;
+	}
+
+
+	const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Shabbos'];
+
+	const now = new Date();
+
+	let rootEl = document.createElement('section');
+
+	const daysOfMinyanimToGet = 3;
+	const minyanimToGet = [];
+	const daysToDisplay = [];
+
+	for (let idx = 0; idx < daysOfMinyanimToGet; idx++) {
+		const dateObj = new Date(new Date().setDate(now.getDate() + idx));
+		const dayOfWeek = days[dateObj.getDay()];
+		const minyanimForDayOfWeek = minyanim?.[dayOfWeek] ?? null;
+		minyanimToGet.push(minyanimForDayOfWeek);
+		daysToDisplay.push(dayOfWeek);
+	}
+
+	minyanimToGet.forEach((dailyMinyan, idx) => {
+		const date = new Date(new Date().setDate(now.getDate() + idx));
+		/** @type {KosherZmanim.JewishCalendar} */
+		const cal = new KosherZmanim.JewishCalendar(date);
+		const isRoshChodesh = cal.isRoshChodesh();
+
+		const jDate = new KosherZmanim.JewishDate(date);
+		const hdf = new KosherZmanim.HebrewDateFormatter(jDate);
+		hdf.setHebrewFormat(true);
+
+		const hebrewDayOfMonth = hdf.formatHebrewNumber(cal.getJewishDayOfMonth());
+		const hebrewMonth = hdf.formatMonth(jDate);
+
+		Object.values(dailyMinyan).forEach((minyan) => {
+
+			minyan.forEach((individualMinyan) => {
+				const zObj = { ...zmanimObj, date };
+				const zmanim = getZmanimJson(zObj);
+				const shkia = zmanim.BasicZmanim.Sunset;
+				const candles = zmanim.BasicZmanim.CandleLighting;
+				if (individualMinyan.basedOnShkia) {
+					const { minutesBeforeShkia } = individualMinyan;
+					const minyanTime = getMinutesBeforeDate(shkia, minutesBeforeShkia);
+					individualMinyan.startTime = getDisplayTime(minyanTime);
+				} else if (individualMinyan.basedOnCandles) {
+					const minchaTime = getFiveMinutesAfterCandles(candles);
+					individualMinyan.startTime = getDisplayTime(minchaTime);
+				} else if (individualMinyan.candles) {
+					const minchaTime = candles;
+					individualMinyan.startTime = getDisplayTime(minchaTime);
+				}
+
+				if (isRoshChodesh && individualMinyan.minutesEarlierOnRoshChodesh > 0) {
+					const originalStartTime = convertTime12to24(date, individualMinyan.startTime);
+					individualMinyan.startTime = getDisplayTime(getMinutesBeforeDate(originalStartTime, individualMinyan.minutesEarlierOnRoshChodesh))
+				}
+			});
+		});
+
+		if (dailyMinyan) {
+			const headingText = `${daysToDisplay[idx]}, ${date.toLocaleDateString('en', {
+				month: "long",
+				day: "numeric",
+				year: "numeric"
+			})}`;
+			const headingEl = document.createElement('h1');
+			headingEl.insertAdjacentText('afterbegin', headingText);
+			headingEl.insertAdjacentElement('beforeend', document.createElement('br'));
+			headingEl.insertAdjacentText('beforeend', `${hebrewDayOfMonth + " " + hebrewMonth}`);
+			rootEl.insertAdjacentElement('beforeend', headingEl);
+
+			if (isRoshChodesh) {
+				const subHeadingEl = document.createElement('h3');
+				subHeadingEl.insertAdjacentText('afterbegin', 'ראש חודש');
+				rootEl.insertAdjacentElement('beforeend', subHeadingEl);
+			}
+
+			for (const [minyanName, minyanInfo] of Object.entries(dailyMinyan)) {
+				const minyanTitle = document.createElement('h2');
+				minyanTitle.insertAdjacentText('afterbegin', minyanName);
+				rootEl.insertAdjacentElement('beforeend', minyanTitle);
+
+				const list = document.createElement('ol');
+
+				for (const minyan of minyanInfo) {
+					if (minyan.enabled) {
+						const li = document.createElement('li');
+						li.insertAdjacentText('afterbegin', minyan.startTime);
+						list.insertAdjacentElement('beforeend', li);
+					}
+				}
+
+				rootEl.insertAdjacentElement('beforeend', list);
+			}
+		}
+	});
+
+	document.getElementById('zmanim').insertAdjacentElement('afterbegin', rootEl);
+</script>
