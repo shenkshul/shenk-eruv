@@ -244,6 +244,86 @@
 					minutesBeforeShkia: -51
 				}
 			]
+		},
+		Erev_Purim: {
+			Shacharis: [
+				{
+					enabled: true,
+					startTime: '6:30 AM'
+				},
+				{
+					enabled: true,
+					startTime: '7:30 AM'
+				},
+				{
+					enabled: true,
+					startTime: '8:30 AM'
+				}
+			],
+			Mincha: [
+				{
+					enabled: true,
+					startTime: '1:35 PM'
+				},
+				{
+					enabled: true,
+					startTime: '6:30 PM'
+				}
+			],
+			Maariv: [
+				{
+					enabled: true,
+					startTime: '7:40 PM',
+					notes: 'Megillah not before 7:54 PM'
+				}
+			],
+			'Megillah Only': [
+				{
+					enabled: true,
+					startTime: '9:00 PM'
+				}
+			]
+		},
+		Purim: {
+			Shacharis: [
+				{
+					enabled: true,
+					startTime: '6:40 AM',
+					notes: 'Megillah not before 7:15 AM'
+				},
+				{
+					enabled: true,
+					startTime: '7:15 AM',
+					notes: 'Megillah not before 7:50 AM'
+				},
+				{
+					enabled: true,
+					startTime: '9:00 AM',
+					notes: 'Megillah not before 9:35 AM'
+				}
+			],
+			Mincha: [
+				{
+					enabled: true,
+					startTime: '1:35 PM'
+				},
+				{
+					enabled: true,
+					startTime: '2:30 PM'
+				}
+			],
+			'Mincha/Maariv': [
+				{
+					enabled: true,
+					startTime: '6:50 PM'
+				}
+			],
+			Maariv: [
+				{
+					enabled: true,
+					startTime: '10:00 PM'
+				}
+			]
 		}
 	};
 
@@ -299,7 +379,6 @@
 		return d;
 	}
 
-
 	const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Shabbos'];
 
 	const now = new Date();
@@ -318,11 +397,18 @@
 		daysToDisplay.push(dayOfWeek);
 	}
 
-	minyanimToGet.forEach((dailyMinyan, idx) => {
+	minyanimToGet.forEach((dailyMinyanAsdf, idx) => {
 		const date = new Date(new Date().setDate(now.getDate() + idx));
+		const nextDate = new Date(new Date().setDate(now.getDate() + (idx + 1)));
 		/** @type {KosherZmanim.JewishCalendar} */
 		const cal = new KosherZmanim.JewishCalendar(date);
 		const isRoshChodesh = cal.isRoshChodesh();
+
+		/** @type {KosherZmanim.JewishCalendar} */
+		const cal2 = new KosherZmanim.JewishCalendar(nextDate);
+
+		const isPurim = cal.getYomTovIndex() === KosherZmanim.JewishCalendar.PURIM;
+		const isErevPurim = cal2.getYomTovIndex() === KosherZmanim.JewishCalendar.PURIM;
 
 		const jDate = new KosherZmanim.JewishDate(date);
 		const hdf = new KosherZmanim.HebrewDateFormatter(jDate);
@@ -331,8 +417,13 @@
 		const hebrewDayOfMonth = hdf.formatHebrewNumber(cal.getJewishDayOfMonth());
 		const hebrewMonth = hdf.formatMonth(jDate);
 
-		Object.values(dailyMinyan).forEach((minyan) => {
+		let dailyMinyan = isErevPurim
+			? minyanim.Erev_Purim
+			: isPurim
+			? minyanim.Purim
+			: dailyMinyanAsdf;
 
+		Object.values(dailyMinyan).forEach((minyan) => {
 			minyan.forEach((individualMinyan) => {
 				const zObj = { ...zmanimObj, date };
 				const zmanim = getZmanimJson(zObj);
@@ -352,26 +443,38 @@
 
 				if (isRoshChodesh && individualMinyan.minutesEarlierOnRoshChodesh > 0) {
 					const originalStartTime = convertTime12to24(date, individualMinyan.startTime);
-					individualMinyan.startTime = getDisplayTime(getMinutesBeforeDate(originalStartTime, individualMinyan.minutesEarlierOnRoshChodesh))
+					individualMinyan.startTime = getDisplayTime(
+						getMinutesBeforeDate(originalStartTime, individualMinyan.minutesEarlierOnRoshChodesh)
+					);
 				}
 			});
 		});
 
 		if (dailyMinyan) {
 			const headingText = `${daysToDisplay[idx]}, ${date.toLocaleDateString('en', {
-				month: "long",
-				day: "numeric",
-				year: "numeric"
+				month: 'long',
+				day: 'numeric',
+				year: 'numeric'
 			})}`;
 			const headingEl = document.createElement('h1');
 			headingEl.insertAdjacentText('afterbegin', headingText);
 			headingEl.insertAdjacentElement('beforeend', document.createElement('br'));
-			headingEl.insertAdjacentText('beforeend', `${hebrewDayOfMonth + " " + hebrewMonth}`);
+			headingEl.insertAdjacentText('beforeend', `${hebrewDayOfMonth + ' ' + hebrewMonth}`);
 			rootEl.insertAdjacentElement('beforeend', headingEl);
 
 			if (isRoshChodesh) {
 				const subHeadingEl = document.createElement('h3');
 				subHeadingEl.insertAdjacentText('afterbegin', 'ראש חודש');
+				rootEl.insertAdjacentElement('beforeend', subHeadingEl);
+			}
+			if (isErevPurim) {
+				const subHeadingEl = document.createElement('h3');
+				subHeadingEl.insertAdjacentText('afterbegin', 'תענית אסתר');
+				rootEl.insertAdjacentElement('beforeend', subHeadingEl);
+			}
+			if (isPurim) {
+				const subHeadingEl = document.createElement('h3');
+				subHeadingEl.insertAdjacentText('afterbegin', 'פורים');
 				rootEl.insertAdjacentElement('beforeend', subHeadingEl);
 			}
 
@@ -386,6 +489,11 @@
 					if (minyan.enabled) {
 						const li = document.createElement('li');
 						li.insertAdjacentText('afterbegin', minyan.startTime);
+
+						if (minyan.notes) {
+							li.insertAdjacentText('beforeend', ` (${minyan.notes})`);
+						}
+
 						list.insertAdjacentElement('beforeend', li);
 					}
 				}
