@@ -212,11 +212,13 @@
 			Shacharis: [
 				{
 					enabled: true,
-					startTime: '7:10 AM'
+					startTime: '7:10 AM',
+					minutesEarlierOnRoshChodesh: 10
 				},
 				{
 					enabled: true,
-					startTime: '9:00 AM'
+					startTime: '9:00 AM',
+					minutesEarlierOnRoshChodesh: -15
 				}
 			],
 			Mincha: [
@@ -307,7 +309,7 @@
 				{
 					enabled: true,
 					startTime: '1:35 PM',
-					notes: "There will be Megillah after Mincha"
+					notes: 'There will be Megillah after Mincha'
 				},
 				{
 					enabled: true,
@@ -443,7 +445,7 @@
 					individualMinyan.startTime = getDisplayTime(minchaTime);
 				}
 
-				if (isRoshChodesh && individualMinyan.minutesEarlierOnRoshChodesh > 0) {
+				if (isRoshChodesh && (individualMinyan.minutesEarlierOnRoshChodesh ?? 0) !== 0) {
 					const originalStartTime = convertTime12to24(date, individualMinyan.startTime);
 					individualMinyan.startTime = getDisplayTime(
 						getMinutesBeforeDate(originalStartTime, individualMinyan.minutesEarlierOnRoshChodesh)
