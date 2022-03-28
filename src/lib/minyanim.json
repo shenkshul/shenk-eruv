@@ -115,7 +115,8 @@
       },
       {
         "enabled": true,
-        "startTime": "9:15 AM"
+        "startTime": "9:15 AM",
+        "notes": "Test note"
       }
     ],
     "Mincha/Maariv": [
