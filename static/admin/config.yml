@@ -32,20 +32,21 @@ collections:
           - name: Sunday
             widget: object
             label: Sunday Minyanim
-            collapsed: false
+            collapsed: true
             fields:
               - label: Shacharis
-                name: shacharis
-                collapsed: false
+                name: Shacharis
+                collapsed: true
                 widget: list
                 fields:
                 - label: Start Time
                   name: startTime
                   widget: datetime
+                  default: ""
                   format: h:mm A 
                   date_format: false
                   time_format: h:mm A
-                  required: true
+                  required: false
                 - label: Enabled
                   name: enabled
                   widget: boolean
@@ -53,24 +54,115 @@ collections:
                 - label: Notes
                   name: notes
                   widget: string
+                  required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
+                  required: false
+              - label: Mincha/Maariv
+                name: Mincha/Maariv
+                collapsed: true
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  default: ""
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: false
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
+                  required: false
+              - label: Maariv
+                name: Maariv
+                collapsed: true
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  default: ""
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: false
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
                   required: false
           - name: Monday
             widget: object
             label: Monday Minyanim
-            collapsed: false
+            collapsed: true
             fields:
               - label: Shacharis
-                name: shacharis
-                collapsed: false
+                name: Shacharis
+                collapsed: true
                 widget: list
                 fields:
                 - label: Start Time
                   name: startTime
                   widget: datetime
+                  default: ""
                   format: h:mm A 
                   date_format: false
                   time_format: h:mm A
-                  required: true
+                  required: false
                 - label: Enabled
                   name: enabled
                   widget: boolean
@@ -78,24 +170,115 @@ collections:
                 - label: Notes
                   name: notes
                   widget: string
+                  required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
+                  required: false
+              - label: Mincha/Maariv
+                name: Mincha/Maariv
+                collapsed: true
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  default: ""
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: false
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
+                  required: false
+              - label: Maariv
+                name: Maariv
+                collapsed: true
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  default: ""
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: false
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
                   required: false
           - name: Tuesday
             widget: object
             label: Tuesday Minyanim
-            collapsed: false
+            collapsed: true
             fields:
               - label: Shacharis
-                name: shacharis
-                collapsed: false
+                name: Shacharis
+                collapsed: true
                 widget: list
                 fields:
                 - label: Start Time
                   name: startTime
                   widget: datetime
+                  default: ""
                   format: h:mm A 
                   date_format: false
                   time_format: h:mm A
-                  required: true
+                  required: false
                 - label: Enabled
                   name: enabled
                   widget: boolean
@@ -103,24 +286,115 @@ collections:
                 - label: Notes
                   name: notes
                   widget: string
+                  required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
+                  required: false
+              - label: Mincha/Maariv
+                name: Mincha/Maariv
+                collapsed: true
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  default: ""
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: false
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
+                  required: false
+              - label: Maariv
+                name: Maariv
+                collapsed: true
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  default: ""
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: false
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
                   required: false
           - name: Wednesday
             widget: object
             label: Wednesday Minyanim
-            collapsed: false
+            collapsed: true
             fields:
               - label: Shacharis
-                name: shacharis
-                collapsed: false
+                name: Shacharis
+                collapsed: true
                 widget: list
                 fields:
                 - label: Start Time
                   name: startTime
                   widget: datetime
+                  default: ""
                   format: h:mm A 
                   date_format: false
                   time_format: h:mm A
-                  required: true
+                  required: false
                 - label: Enabled
                   name: enabled
                   widget: boolean
@@ -128,24 +402,115 @@ collections:
                 - label: Notes
                   name: notes
                   widget: string
+                  required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
+                  required: false
+              - label: Mincha/Maariv
+                name: Mincha/Maariv
+                collapsed: true
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  default: ""
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: false
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
+                  required: false
+              - label: Maariv
+                name: Maariv
+                collapsed: true
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  default: ""
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: false
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
                   required: false
           - name: Thursday
             widget: object
             label: Thursday Minyanim
-            collapsed: false
+            collapsed: true
             fields:
               - label: Shacharis
-                name: shacharis
-                collapsed: false
+                name: Shacharis
+                collapsed: true
                 widget: list
                 fields:
                 - label: Start Time
                   name: startTime
                   widget: datetime
+                  default: ""
                   format: h:mm A 
                   date_format: false
                   time_format: h:mm A
-                  required: true
+                  required: false
                 - label: Enabled
                   name: enabled
                   widget: boolean
@@ -153,24 +518,115 @@ collections:
                 - label: Notes
                   name: notes
                   widget: string
+                  required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
+                  required: false
+              - label: Mincha/Maariv
+                name: Mincha/Maariv
+                collapsed: true
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  default: ""
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: false
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
+                  required: false
+              - label: Maariv
+                name: Maariv
+                collapsed: true
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  default: ""
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: false
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
                   required: false
           - name: Friday
             widget: object
             label: Friday Minyanim
-            collapsed: false
+            collapsed: true
             fields:
               - label: Shacharis
-                name: shacharis
-                collapsed: false
+                name: Shacharis
+                collapsed: true
                 widget: list
                 fields:
                 - label: Start Time
                   name: startTime
                   widget: datetime
+                  default: ""
                   format: h:mm A 
                   date_format: false
                   time_format: h:mm A
-                  required: true
+                  required: false
                 - label: Enabled
                   name: enabled
                   widget: boolean
@@ -179,3 +635,555 @@ collections:
                   name: notes
                   widget: string
                   required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
+                  required: false
+              - label: Mincha/Kabalat Shabbat
+                name: Mincha/Kabalat Shabbat
+                collapsed: true
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  default: ""
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: false
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
+                  required: false
+              - label: Candles
+                name: Candles
+                collapsed: true
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  default: ""
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: false
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
+                  required: false
+          - name: Shabbos
+            widget: object
+            label: Shabbos Minyanim
+            collapsed: true
+            fields:
+              - label: Shacharis
+                name: Shacharis
+                collapsed: true
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  default: ""
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: false
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
+                  required: false
+              - label: Mincha
+                name: Mincha
+                collapsed: true
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  default: ""
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: false
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
+                  required: false
+              - label: Maariv
+                name: Maariv
+                collapsed: true
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  default: ""
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: false
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
+                  required: false
+              - label: Havdala
+                name: Havdala
+                collapsed: true
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  default: ""
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: false
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
+                  required: false
+          - name: Erev_Purim
+            widget: object
+            label: Taanis Esther
+            collapsed: true
+            fields:
+              - label: Shacharis
+                name: Shacharis
+                collapsed: true
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  default: ""
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: false
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
+                  required: false
+              - label: Mincha
+                name: Mincha
+                collapsed: true
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  default: ""
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: false
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
+                  required: false
+              - label: Maariv
+                name: Maariv
+                collapsed: true
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  default: ""
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: false
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
+                  required: false
+              - label: Megillah Only
+                name: Megillah Only
+                collapsed: true
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  default: ""
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: false
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
+                  required: false
+          - name: Purim
+            widget: object
+            label: Purim Minyanim
+            collapsed: true
+            fields:
+              - label: Shacharis
+                name: Shacharis
+                collapsed: true
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  default: ""
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: false
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
+                  required: false
+              - label: Mincha
+                name: Mincha
+                collapsed: true
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  default: ""
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: false
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
+                  required: false
+              - label: Mincha/Maariv
+                name: Mincha/Maariv
+                collapsed: true
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  default: ""
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: false
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
+                  required: false
+              - label: Maariv
+                name: Maariv
+                collapsed: true
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  default: ""
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: false
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
+                  required: false
+              
+                  
+          
