@@ -134,7 +134,7 @@
 					if (individualMinyan.zmanBasedOn ?? null !== null) {
 						const zman = zmanimForCalc[individualMinyan.zmanBasedOn];
 						const { minutesBeforeZman } = individualMinyan;
-						const minyanTime = getMinutesBeforeDate(shkia, minutesBeforeZman);
+						const minyanTime = getMinutesBeforeDate(zman, minutesBeforeZman);
 						individualMinyan.startTime = getDisplayTime(minyanTime);
 					}
 
