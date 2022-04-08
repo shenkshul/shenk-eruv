@@ -308,6 +308,11 @@
     ],
     "Mincha/Kabalat Shabbat": [
       {
+        "startTime": "5:50 PM",
+        "enabled": true,
+        "notes": "Candles not before 6:07 PM"
+      },
+      {
         "enabled": true,
         "zmanBasedOn": "candles",
         "minutesBeforeZman": -5,
