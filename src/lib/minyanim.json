@@ -287,7 +287,8 @@
       },
       {
         "enabled": true,
-        "startTime": "7:30 AM"
+        "startTime": "7:30 AM",
+        "notes": "Siyum after minyan"
       },
       {
         "enabled": true,
