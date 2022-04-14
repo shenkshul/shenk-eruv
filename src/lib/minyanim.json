@@ -295,7 +295,7 @@
         "startTime": "8:30 AM"
       },
       {
-        "enabled": true,
+        "enabled": false,
         "startTime": "9:15 AM"
       }
     ],
