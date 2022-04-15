@@ -106,22 +106,22 @@
   "Sunday": {
     "Shacharis": [
       {
-        "enabled": true,
+        "enabled": false,
         "startTime": "7:30 AM"
       },
       {
-        "enabled": true,
+        "enabled": false,
         "startTime": "8:30 AM"
       },
       {
-        "enabled": true,
+        "enabled": false,
         "startTime": "9:15 AM",
         "notes": ""
       }
     ],
     "Mincha/Maariv": [
       {
-        "enabled": true,
+        "enabled": false,
         "zmanBasedOn": "shkia",
         "minutesBeforeZman": 15,
         "startTime": ""
@@ -129,7 +129,7 @@
     ],
     "Maariv": [
       {
-        "enabled": true,
+        "enabled": false,
         "startTime": "10:00 PM"
       }
     ]
