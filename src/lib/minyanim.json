@@ -286,12 +286,12 @@
         "minutesEarlierOnRoshChodesh": 15
       },
       {
-        "enabled": true,
+        "enabled": false,
         "startTime": "7:30 AM",
-        "notes": "Siyum after minyan"
+        "notes": ""
       },
       {
-        "enabled": true,
+        "enabled": false,
         "startTime": "8:30 AM"
       },
       {
