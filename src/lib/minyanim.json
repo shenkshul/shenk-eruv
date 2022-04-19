@@ -242,6 +242,10 @@
       {
         "enabled": false,
         "startTime": "8:30 AM"
+      },
+      {
+        "startTime": "8:00 AM",
+        "enabled": true
       }
     ],
     "Mincha/Maariv": [
