@@ -22,6 +22,9 @@ collections:
             format: MMMM D, YYYY
             date_format: MMMM D, YYYY
             time_format: false
+          - name: notes
+            widget: string
+            label: Notes
   - name: weekdayMinyanim
     label: Minyanim for the Week
     files:

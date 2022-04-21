@@ -1,0 +1,58 @@
+<div id="eruvStatus" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif"></div>
+<script>
+	/**
+	 *
+	 * @param {boolean} status
+	 */
+	const getStatusWord = (status) => {
+		const span = document.createElement('span');
+		const color = status ? '#508d24' : '#8d2424';
+		span.style = `color: ${color}`;
+		span.textContent = status ? ' UP ' : ' DOWN ';
+		return span;
+	};
+
+	/**
+	* @returns {Promise<EruvStatus>}
+	*/
+	async function getEruvStatus() {
+		const res = await fetch('https://awesome-leakey-418b96.netlify.app/status.json');
+
+		if (res.ok) {
+			const data = await res.json();
+// 			const data = {
+//   "status": true,
+//   "lastUpdated": "April 8, 2022",
+//   "notes": " "
+// };
+
+			return data;
+		} else {
+			throw new Error("Couldn't fetch eruv data");
+		}
+	}
+
+	let promise = getEruvStatus();
+	promise.then((data) => {
+		const {status, lastUpdated, /** @type {string} */ notes } = data;
+		const statusEl = document.createElement('p');
+		statusEl.style = 'font-size: 2em !important;';
+		statusEl.insertAdjacentText('beforeend', 'The Eruv is ');
+		statusEl.insertAdjacentElement('beforeend', getStatusWord(status));
+		statusEl.insertAdjacentText('beforeend', ` as of ${lastUpdated}`);
+
+		if (notes && notes?.length > 0) {
+			const statusNote = document.createElement('strong');
+            const statusNoteIndicator = document.createElement('span');
+			statusNoteIndicator.style = 'font-size: 1em !important; color: darkred;';
+            statusNoteIndicator.insertAdjacentText('beforeend', 'Note: ')
+			
+            statusNote.insertAdjacentElement('beforeend', statusNoteIndicator);
+            statusNote.insertAdjacentText('beforeend', notes);
+			statusEl.insertAdjacentElement('beforeend', document.createElement('br'));
+			statusEl.insertAdjacentElement('beforeend', statusNote);
+		}
+
+		document.getElementById('eruvStatus').insertAdjacentElement('beforeend', statusEl);
+	});
+</script>
