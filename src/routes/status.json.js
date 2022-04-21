@@ -1,10 +1,11 @@
-import { lastUpdated, status } from '$lib/eruvStatus.json';
+import { lastUpdated, status, notes } from '$lib/eruvStatus.json';
 
 export async function get() {
 	return {
 		body: {
 			lastUpdated,
-			status
+			status,
+			notes
 		}
 	};
 }
@@ -14,7 +15,8 @@ export async function load() {
 	return {
 		body: {
 			lastUpdated,
-			status
+			status,
+			notes
 		}
 	};
 }
