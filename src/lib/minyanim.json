@@ -2,38 +2,38 @@
   "Tuesday": {
     "Shacharis": [
       {
-        "enabled": false,
+        "enabled": true,
         "startTime": "6:30 AM",
         "minutesEarlierOnRoshChodesh": 15
       },
       {
-        "enabled": false,
+        "enabled": true,
         "startTime": "7:30 AM"
       },
       {
-        "enabled": false,
+        "enabled": true,
         "startTime": "8:30 AM"
       },
       {
         "startTime": "8:00 AM",
-        "enabled": true
+        "enabled": false
       }
     ],
     "Mincha/Maariv": [
       {
-        "enabled": false,
+        "enabled": true,
         "zmanBasedOn": "shkia",
         "minutesBeforeZman": 15,
         "startTime": ""
       },
       {
         "startTime": "7:20 PM",
-        "enabled": true
+        "enabled": false
       }
     ],
     "Maariv": [
       {
-        "enabled": false,
+        "enabled": true,
         "startTime": "10:00 PM"
       }
     ]
@@ -41,12 +41,12 @@
   "Shabbos": {
     "Shacharis": [
       {
-        "enabled": false,
+        "enabled": true,
         "startTime": "7:10 AM",
         "minutesEarlierOnRoshChodesh": 10
       },
       {
-        "enabled": false,
+        "enabled": true,
         "startTime": "9:00 AM",
         "minutesEarlierOnRoshChodesh": -15
       }
@@ -57,7 +57,7 @@
         "startTime": "2:00 PM"
       },
       {
-        "enabled": false,
+        "enabled": true,
         "zmanBasedOn": "shkia",
         "minutesBeforeZman": 40,
         "startTime": ""
@@ -65,7 +65,7 @@
     ],
     "Maariv": [
       {
-        "enabled": false,
+        "enabled": true,
         "zmanBasedOn": "shkia",
         "minutesBeforeZman": -40,
         "startTime": ""
@@ -83,34 +83,34 @@
   "Monday": {
     "Shacharis": [
       {
-        "enabled": false,
+        "enabled": true,
         "startTime": "6:30 AM",
         "minutesEarlierOnRoshChodesh": 15
       },
       {
-        "enabled": false,
+        "enabled": true,
         "startTime": "7:30 AM"
       },
       {
-        "enabled": false,
+        "enabled": true,
         "startTime": "8:30 AM"
       }
     ],
     "Mincha/Maariv": [
       {
-        "enabled": false,
+        "enabled": true,
         "zmanBasedOn": "shkia",
         "minutesBeforeZman": 15,
         "startTime": ""
       },
       {
         "startTime": "7:20 PM",
-        "enabled": true
+        "enabled": false
       }
     ],
     "Maariv": [
       {
-        "enabled": false,
+        "enabled": true,
         "startTime": "10:00 PM"
       }
     ]
@@ -118,22 +118,22 @@
   "Sunday": {
     "Shacharis": [
       {
-        "enabled": false,
+        "enabled": true,
         "startTime": "7:30 AM"
       },
       {
-        "enabled": false,
+        "enabled": true,
         "startTime": "8:30 AM"
       },
       {
-        "enabled": false,
+        "enabled": true,
         "startTime": "9:15 AM",
         "notes": ""
       }
     ],
     "Mincha/Maariv": [
       {
-        "enabled": false,
+        "enabled": true,
         "zmanBasedOn": "shkia",
         "minutesBeforeZman": 15,
         "startTime": ""
@@ -141,7 +141,7 @@
     ],
     "Maariv": [
       {
-        "enabled": false,
+        "enabled": true,
         "startTime": "10:00 PM"
       }
     ]
@@ -231,38 +231,38 @@
   "Wednesday": {
     "Shacharis": [
       {
-        "enabled": false,
+        "enabled": true,
         "startTime": "6:30 AM",
         "minutesEarlierOnRoshChodesh": 15
       },
       {
-        "enabled": false,
+        "enabled": true,
         "startTime": "7:30 AM"
       },
       {
-        "enabled": false,
+        "enabled": true,
         "startTime": "8:30 AM"
       },
       {
         "startTime": "8:00 AM",
-        "enabled": true
+        "enabled": false
       }
     ],
     "Mincha/Maariv": [
       {
-        "enabled": false,
+        "enabled": true,
         "zmanBasedOn": "shkia",
         "minutesBeforeZman": 15,
         "startTime": ""
       },
       {
         "startTime": "7:20 AM",
-        "enabled": true
+        "enabled": false
       }
     ],
     "Maariv": [
       {
-        "enabled": false,
+        "enabled": true,
         "startTime": "10:00 PM"
       }
     ]
@@ -270,26 +270,26 @@
   "Thursday": {
     "Shacharis": [
       {
-        "enabled": false,
+        "enabled": true,
         "startTime": "6:30 AM",
         "minutesEarlierOnRoshChodesh": 15
       },
       {
-        "enabled": false,
+        "enabled": true,
         "startTime": "7:30 AM"
       },
       {
-        "enabled": false,
+        "enabled": true,
         "startTime": "8:30 AM"
       },
       {
         "startTime": "7:20 PM",
-        "enabled": true
+        "enabled": false
       }
     ],
     "Mincha/Maariv": [
       {
-        "enabled": false,
+        "enabled": true,
         "zmanBasedOn": "shkia",
         "minutesBeforeZman": 15,
         "startTime": ""
@@ -297,7 +297,7 @@
     ],
     "Maariv": [
       {
-        "enabled": false,
+        "enabled": true,
         "startTime": "10:00 PM"
       }
     ]
@@ -305,21 +305,21 @@
   "Friday": {
     "Shacharis": [
       {
-        "enabled": false,
+        "enabled": true,
         "startTime": "6:30 AM",
         "minutesEarlierOnRoshChodesh": 15
       },
       {
-        "enabled": false,
+        "enabled": true,
         "startTime": "7:30 AM",
         "notes": ""
       },
       {
-        "enabled": false,
+        "enabled": true,
         "startTime": "8:30 AM"
       },
       {
-        "enabled": false,
+        "enabled": true,
         "startTime": "9:15 AM"
       }
     ],
@@ -338,7 +338,7 @@
         "notes": "Candles not before 6:07 PM"
       },
       {
-        "enabled": false,
+        "enabled": true,
         "zmanBasedOn": "candles",
         "minutesBeforeZman": -5,
         "startTime": ""
