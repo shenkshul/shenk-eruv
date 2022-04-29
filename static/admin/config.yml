@@ -25,6 +25,7 @@ collections:
           - name: notes
             widget: string
             label: Notes
+            required: false
   - name: weekdayMinyanim
     label: Minyanim for the Week
     files:
