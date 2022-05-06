@@ -348,7 +348,7 @@
         "enabled": true,
         "notes": "",
         "zmanBasedOn": "plagMincha",
-        "minutesBeforeZman": -15
+        "minutesBeforeZman": 15
       },
       {
         "enabled": true,
