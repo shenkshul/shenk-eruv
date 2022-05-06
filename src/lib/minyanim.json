@@ -332,7 +332,8 @@
         "startTime": "",
         "enabled": true,
         "zmanBasedOn": "plagMincha",
-        "notes": "not before"
+        "notes": "not before",
+        "minutesBeforeZman": 0
       },
       {
         "enabled": true,
