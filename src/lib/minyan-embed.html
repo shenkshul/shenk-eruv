@@ -116,8 +116,8 @@
 			let dailyMinyan = isErevPurim
 				? minyanim.Erev_Purim
 				: isPurim
-				? minyanim.Purim
-				: dailyMinyanAsdf;
+					? minyanim.Purim
+					: dailyMinyanAsdf;
 
 			Object.values(dailyMinyan).forEach((minyan) => {
 				minyan.forEach((individualMinyan) => {
@@ -125,10 +125,12 @@
 					const zmanim = getZmanimJson(zObj);
 					const shkia = zmanim.BasicZmanim.Sunset;
 					const candles = zmanim.BasicZmanim.CandleLighting;
+					const plagMincha = zmanim.BasicZmanim.PlagHamincha;
 
 					const zmanimForCalc = {
+						candles,
+						plagMincha,
 						shkia,
-						candles
 					};
 
 					if (individualMinyan.zmanBasedOn ?? null !== null) {
