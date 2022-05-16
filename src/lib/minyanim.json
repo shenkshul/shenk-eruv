@@ -316,15 +316,17 @@
       {
         "enabled": true,
         "startTime": "7:30 AM",
-        "notes": ""
+        "notes": "Bris after Minyan"
       },
       {
         "enabled": true,
-        "startTime": "8:30 AM"
+        "startTime": "8:30 AM",
+        "notes": "Theater"
       },
       {
         "enabled": true,
-        "startTime": "9:15 AM"
+        "startTime": "9:15 AM",
+        "notes": "Theater"
       }
     ],
     "Candles": [
