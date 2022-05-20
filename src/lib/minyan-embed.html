@@ -1,4 +1,5 @@
 <script src="https://unpkg.com/kosher-zmanim@0.8.2/dist/kosher-zmanim.min.js"></script>
+<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
 
 <div id="zmanim"></div>
 
@@ -74,7 +75,7 @@
 
 	const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Shabbos'];
 
-	const now = new Date();
+	const now = dayjs();
 
 	let rootEl = document.createElement('section');
 
@@ -83,21 +84,23 @@
 	const daysToDisplay = [];
 
 	const getAndSetMinyanim = async () => {
-		const {minyanim} = await fetch('https://awesome-leakey-418b96.netlify.app/minyanim.json').then((res) => res.json());
+		const { minyanim } = await fetch(
+			'https://awesome-leakey-418b96.netlify.app/minyanim.json'
+		).then((res) => res.json());
 
 		for (let idx = 0; idx < daysOfMinyanimToGet; idx++) {
-			const dateObj = new Date(new Date().setDate(now.getDate() + idx));
-			const dayOfWeek = days[dateObj.getDay()];
+			const dateObj = now.add(idx, 'day');
+			const dayOfWeek = days[dateObj.day()];
 			const minyanimForDayOfWeek = minyanim?.[dayOfWeek] ?? null;
 			minyanimToGet.push(minyanimForDayOfWeek);
 			daysToDisplay.push(dayOfWeek);
 		}
 
-		minyanimToGet.forEach((dailyMinyanAsdf, idx) => {
-			const date = new Date(new Date().setDate(now.getDate() + idx));
-			const nextDate = new Date(new Date().setDate(now.getDate() + (idx + 1)));
+		minyanimToGet.forEach((dailyMinyanim, idx) => {
+			const currentDate = now.add(idx, 'day').toDate();
+			const nextDate = now.add(idx + 1, 'day').toDate();
 			/** @type {KosherZmanim.JewishCalendar} */
-			const cal = new KosherZmanim.JewishCalendar(date);
+			const cal = new KosherZmanim.JewishCalendar(currentDate);
 			const isRoshChodesh = cal.isRoshChodesh();
 
 			/** @type {KosherZmanim.JewishCalendar} */
@@ -106,31 +109,48 @@
 			const isPurim = cal.getYomTovIndex() === KosherZmanim.JewishCalendar.PURIM;
 			const isErevPurim = cal2.getYomTovIndex() === KosherZmanim.JewishCalendar.PURIM;
 
-			const jDate = new KosherZmanim.JewishDate(date);
+			const jDate = new KosherZmanim.JewishDate(currentDate);
 			const hdf = new KosherZmanim.HebrewDateFormatter(jDate);
 			hdf.setHebrewFormat(true);
 
 			const hebrewDayOfMonth = hdf.formatHebrewNumber(cal.getJewishDayOfMonth());
 			const hebrewMonth = hdf.formatMonth(jDate);
 
-			let dailyMinyan = isErevPurim
-				? minyanim.Erev_Purim
-				: isPurim
-					? minyanim.Purim
-					: dailyMinyanAsdf;
+			let dailyMinyan;
+
+			switch (cal.getYomTovIndex()) {
+				case KosherZmanim.JewishCalendar.PURIM:
+					dailyMinyan = minyanim.Purim;
+					break;
+				case KosherZmanim.JewishCalendar.SHAVUOS:
+					dailyMinyan = cal.getJewishDayOfMonth() === 6 ? minyanim.Shavuos : minyanim.Shavuos_2;
+					break;
+				case -1:
+				default:
+					dailyMinyan = dailyMinyanim;
+					break;
+			}
+
+			if (isErevPurim) {
+				dailyMinyan = minyanim.Erev_Purim;
+			}
 
 			Object.values(dailyMinyan).forEach((minyan) => {
 				minyan.forEach((individualMinyan) => {
-					const zObj = { ...zmanimObj, date };
+					const zObj = { ...zmanimObj, currentDate };
 					const zmanim = getZmanimJson(zObj);
 					const shkia = zmanim.BasicZmanim.Sunset;
 					const candles = zmanim.BasicZmanim.CandleLighting;
 					const plagMincha = zmanim.BasicZmanim.PlagHamincha;
+					const alos = zmanim.BasicZmanim.AlosHashachar;
+					const netz = zmanim.BasicZmanim.Sunrise;
 
 					const zmanimForCalc = {
 						candles,
 						plagMincha,
 						shkia,
+						alos,
+						netz
 					};
 
 					if (individualMinyan.zmanBasedOn ?? null !== null) {
@@ -141,7 +161,7 @@
 					}
 
 					if (isRoshChodesh && (individualMinyan.minutesEarlierOnRoshChodesh ?? 0) !== 0) {
-						const originalStartTime = convertTime12to24(date, individualMinyan.startTime);
+						const originalStartTime = convertTime12to24(currentDate, individualMinyan.startTime);
 						individualMinyan.startTime = getDisplayTime(
 							getMinutesBeforeDate(originalStartTime, individualMinyan.minutesEarlierOnRoshChodesh)
 						);
@@ -150,7 +170,7 @@
 			});
 
 			if (dailyMinyan) {
-				const headingText = `${daysToDisplay[idx]}, ${date.toLocaleDateString('en', {
+				const headingText = `${daysToDisplay[idx]}, ${currentDate.toLocaleDateString('en', {
 					month: 'long',
 					day: 'numeric',
 					year: 'numeric'
