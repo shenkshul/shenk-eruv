@@ -63,7 +63,7 @@ collections:
                   hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
                   name: zmanBasedOn
                   widget: select
-                  options: ['candles', 'shkia', 'plagMincha']
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
                   required: false
                 - label: Minutes before Zman
                   name: minutesBeforeZman
@@ -100,7 +100,7 @@ collections:
                   hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
                   name: zmanBasedOn
                   widget: select
-                  options: ['candles', 'shkia', 'plagMincha']
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
                   required: false
                 - label: Minutes before Zman
                   name: minutesBeforeZman
@@ -137,7 +137,7 @@ collections:
                   hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
                   name: zmanBasedOn
                   widget: select
-                  options: ['candles', 'shkia', 'plagMincha']
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
                   required: false
                 - label: Minutes before Zman
                   name: minutesBeforeZman
@@ -179,7 +179,7 @@ collections:
                   hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
                   name: zmanBasedOn
                   widget: select
-                  options: ['candles', 'shkia', 'plagMincha']
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
                   required: false
                 - label: Minutes before Zman
                   name: minutesBeforeZman
@@ -216,7 +216,7 @@ collections:
                   hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
                   name: zmanBasedOn
                   widget: select
-                  options: ['candles', 'shkia', 'plagMincha']
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
                   required: false
                 - label: Minutes before Zman
                   name: minutesBeforeZman
@@ -253,7 +253,7 @@ collections:
                   hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
                   name: zmanBasedOn
                   widget: select
-                  options: ['candles', 'shkia', 'plagMincha']
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
                   required: false
                 - label: Minutes before Zman
                   name: minutesBeforeZman
@@ -295,7 +295,7 @@ collections:
                   hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
                   name: zmanBasedOn
                   widget: select
-                  options: ['candles', 'shkia', 'plagMincha']
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
                   required: false
                 - label: Minutes before Zman
                   name: minutesBeforeZman
@@ -332,7 +332,7 @@ collections:
                   hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
                   name: zmanBasedOn
                   widget: select
-                  options: ['candles', 'shkia', 'plagMincha']
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
                   required: false
                 - label: Minutes before Zman
                   name: minutesBeforeZman
@@ -369,7 +369,7 @@ collections:
                   hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
                   name: zmanBasedOn
                   widget: select
-                  options: ['candles', 'shkia', 'plagMincha']
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
                   required: false
                 - label: Minutes before Zman
                   name: minutesBeforeZman
@@ -411,7 +411,7 @@ collections:
                   hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
                   name: zmanBasedOn
                   widget: select
-                  options: ['candles', 'shkia', 'plagMincha']
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
                   required: false
                 - label: Minutes before Zman
                   name: minutesBeforeZman
@@ -448,7 +448,7 @@ collections:
                   hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
                   name: zmanBasedOn
                   widget: select
-                  options: ['candles', 'shkia', 'plagMincha']
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
                   required: false
                 - label: Minutes before Zman
                   name: minutesBeforeZman
@@ -485,7 +485,7 @@ collections:
                   hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
                   name: zmanBasedOn
                   widget: select
-                  options: ['candles', 'shkia', 'plagMincha']
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
                   required: false
                 - label: Minutes before Zman
                   name: minutesBeforeZman
@@ -527,7 +527,7 @@ collections:
                   hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
                   name: zmanBasedOn
                   widget: select
-                  options: ['candles', 'shkia', 'plagMincha']
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
                   required: false
                 - label: Minutes before Zman
                   name: minutesBeforeZman
@@ -564,7 +564,7 @@ collections:
                   hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
                   name: zmanBasedOn
                   widget: select
-                  options: ['candles', 'shkia', 'plagMincha']
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
                   required: false
                 - label: Minutes before Zman
                   name: minutesBeforeZman
@@ -601,7 +601,7 @@ collections:
                   hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
                   name: zmanBasedOn
                   widget: select
-                  options: ['candles', 'shkia', 'plagMincha']
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
                   required: false
                 - label: Minutes before Zman
                   name: minutesBeforeZman
@@ -643,7 +643,7 @@ collections:
                   hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
                   name: zmanBasedOn
                   widget: select
-                  options: ['candles', 'shkia', 'plagMincha']
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
                   required: false
                 - label: Minutes before Zman
                   name: minutesBeforeZman
@@ -680,7 +680,7 @@ collections:
                   hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
                   name: zmanBasedOn
                   widget: select
-                  options: ['candles', 'shkia', 'plagMincha']
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
                   required: false
                 - label: Minutes before Zman
                   name: minutesBeforeZman
@@ -717,7 +717,7 @@ collections:
                   hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
                   name: zmanBasedOn
                   widget: select
-                  options: ['candles', 'shkia', 'plagMincha']
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
                   required: false
                 - label: Minutes before Zman
                   name: minutesBeforeZman
@@ -759,7 +759,7 @@ collections:
                   hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
                   name: zmanBasedOn
                   widget: select
-                  options: ['candles', 'shkia', 'plagMincha']
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
                   required: false
                 - label: Minutes before Zman
                   name: minutesBeforeZman
@@ -796,7 +796,7 @@ collections:
                   hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
                   name: zmanBasedOn
                   widget: select
-                  options: ['candles', 'shkia', 'plagMincha']
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
                   required: false
                 - label: Minutes before Zman
                   name: minutesBeforeZman
@@ -833,7 +833,7 @@ collections:
                   hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
                   name: zmanBasedOn
                   widget: select
-                  options: ['candles', 'shkia', 'plagMincha']
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
                   required: false
                 - label: Minutes before Zman
                   name: minutesBeforeZman
@@ -870,7 +870,7 @@ collections:
                   hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
                   name: zmanBasedOn
                   widget: select
-                  options: ['candles', 'shkia', 'plagMincha']
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
                   required: false
                 - label: Minutes before Zman
                   name: minutesBeforeZman
@@ -912,7 +912,7 @@ collections:
                   hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
                   name: zmanBasedOn
                   widget: select
-                  options: ['candles', 'shkia', 'plagMincha']
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
                   required: false
                 - label: Minutes before Zman
                   name: minutesBeforeZman
@@ -949,7 +949,7 @@ collections:
                   hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
                   name: zmanBasedOn
                   widget: select
-                  options: ['candles', 'shkia', 'plagMincha']
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
                   required: false
                 - label: Minutes before Zman
                   name: minutesBeforeZman
@@ -986,7 +986,7 @@ collections:
                   hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
                   name: zmanBasedOn
                   widget: select
-                  options: ['candles', 'shkia', 'plagMincha']
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
                   required: false
                 - label: Minutes before Zman
                   name: minutesBeforeZman
@@ -1023,7 +1023,7 @@ collections:
                   hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
                   name: zmanBasedOn
                   widget: select
-                  options: ['candles', 'shkia', 'plagMincha']
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
                   required: false
                 - label: Minutes before Zman
                   name: minutesBeforeZman
@@ -1065,7 +1065,7 @@ collections:
                   hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
                   name: zmanBasedOn
                   widget: select
-                  options: ['candles', 'shkia', 'plagMincha']
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
                   required: false
                 - label: Minutes before Zman
                   name: minutesBeforeZman
@@ -1102,7 +1102,7 @@ collections:
                   hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
                   name: zmanBasedOn
                   widget: select
-                  options: ['candles', 'shkia', 'plagMincha']
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
                   required: false
                 - label: Minutes before Zman
                   name: minutesBeforeZman
@@ -1139,7 +1139,7 @@ collections:
                   hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
                   name: zmanBasedOn
                   widget: select
-                  options: ['candles', 'shkia', 'plagMincha']
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
                   required: false
                 - label: Minutes before Zman
                   name: minutesBeforeZman
@@ -1176,7 +1176,276 @@ collections:
                   hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
                   name: zmanBasedOn
                   widget: select
-                  options: ['candles', 'shkia', 'plagMincha']
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
+                  required: false
+          - name: Shavuos
+            widget: object
+            label: First Day Shavuos
+            collapsed: true
+            fields:
+              - label: Shacharis
+                name: Shacharis
+                collapsed: true
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  default: ""
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: false
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
+                  required: false
+              - label: Mincha
+                name: Mincha
+                collapsed: true
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  default: ""
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: false
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
+                  required: false
+              - label: Maariv
+                name: Maariv
+                collapsed: true
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  default: ""
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: false
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
+                  required: false
+              - label: Candles
+                name: Candles
+                collapsed: true
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  default: ""
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: false
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
+                  required: false
+          - name: Shavuos_2
+            widget: object
+            label: Second Day Shavuos
+            collapsed: true
+            fields:
+              - label: Shacharis
+                name: Shacharis
+                collapsed: true
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  default: ""
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: false
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
+                  required: false
+              - label: Mincha
+                name: Mincha
+                collapsed: true
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  default: ""
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: false
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
+                  required: false
+                - label: Minutes before Zman
+                  name: minutesBeforeZman
+                  hint: "Use negative values for minutes after the zman"
+                  widget: number
+                  required: false
+                - label: Minutes earlier on Rosh Chodesh
+                  name: minutesEarlierOnRoshChodesh
+                  hint: "Use negative values if the start time should be later"
+                  widget: number
+                  required: false
+              - label: Maariv
+                name: Maariv
+                collapsed: true
+                widget: list
+                fields:
+                - label: Start Time
+                  name: startTime
+                  widget: datetime
+                  default: ""
+                  format: h:mm A 
+                  date_format: false
+                  time_format: h:mm A
+                  required: false
+                - label: Enabled
+                  name: enabled
+                  widget: boolean
+                  default: true
+                - label: Notes
+                  name: notes
+                  widget: string
+                  required: false
+                - label: Based on a zman
+                  hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+                  name: zmanBasedOn
+                  widget: select
+                  options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz']
                   required: false
                 - label: Minutes before Zman
                   name: minutesBeforeZman
