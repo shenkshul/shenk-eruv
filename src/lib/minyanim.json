@@ -61,10 +61,14 @@
         "enabled": true
       },
       {
-        "enabled": true,
+        "enabled": false,
         "zmanBasedOn": "shkia",
         "minutesBeforeZman": 40,
         "startTime": ""
+      },
+      {
+        "startTime": "7:15 PM",
+        "enabled": true
       }
     ],
     "Maariv": [
