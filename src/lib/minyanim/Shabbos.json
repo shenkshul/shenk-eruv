@@ -1,0 +1,50 @@
+{
+  "Shacharis": [
+    {
+      "enabled": true,
+      "startTime": "7:10 AM",
+      "minutesEarlierOnRoshChodesh": 10
+    },
+    {
+      "enabled": true,
+      "startTime": "9:00 AM",
+      "minutesEarlierOnRoshChodesh": -15
+    }
+  ],
+  "Mincha": [
+    {
+      "enabled": true,
+      "startTime": "2:00 PM"
+    },
+    {
+      "startTime": "6:00 PM",
+      "enabled": false
+    },
+    {
+      "enabled": false,
+      "zmanBasedOn": "shkia",
+      "minutesBeforeZman": 40,
+      "startTime": ""
+    },
+    {
+      "startTime": "7:40 PM",
+      "enabled": true
+    }
+  ],
+  "Maariv": [
+    {
+      "enabled": true,
+      "zmanBasedOn": "shkia",
+      "minutesBeforeZman": -40,
+      "startTime": ""
+    }
+  ],
+  "Havdala": [
+    {
+      "enabled": true,
+      "zmanBasedOn": "shkia",
+      "minutesBeforeZman": -51,
+      "startTime": ""
+    }
+  ]
+}

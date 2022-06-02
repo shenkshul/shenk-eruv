@@ -1,0 +1,32 @@
+{
+  "Shacharis": [
+    {
+      "startTime": "4:50 AM",
+      "enabled": true,
+      "notes": "Netz at 5:25)"
+    },
+    {
+      "startTime": "8:30 AM",
+      "enabled": true
+    }
+  ],
+  "Mincha": [
+    {
+      "startTime": "8:10 PM",
+      "enabled": true
+    }
+  ],
+  "Maariv": [
+    {
+      "startTime": "9:15 PM",
+      "enabled": true,
+      "notes": ""
+    }
+  ],
+  "Candles": [
+    {
+      "startTime": "9:15 PM",
+      "enabled": true
+    }
+  ]
+}

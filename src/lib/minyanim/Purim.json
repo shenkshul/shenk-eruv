@@ -1,0 +1,42 @@
+{
+  "Shacharis": [
+    {
+      "enabled": true,
+      "startTime": "6:40 AM",
+      "notes": "Location 5th floor. Megillah not before 7:15 AM"
+    },
+    {
+      "enabled": true,
+      "startTime": "7:15 AM",
+      "notes": "Megillah not before 7:50 AM"
+    },
+    {
+      "enabled": true,
+      "startTime": "9:00 AM",
+      "notes": "Megillah not before 9:35 AM"
+    }
+  ],
+  "Mincha": [
+    {
+      "enabled": true,
+      "startTime": "1:35 PM",
+      "notes": "There will be Megillah after Mincha"
+    },
+    {
+      "enabled": true,
+      "startTime": "2:30 PM"
+    }
+  ],
+  "Mincha/Maariv": [
+    {
+      "enabled": true,
+      "startTime": "6:50 PM"
+    }
+  ],
+  "Maariv": [
+    {
+      "enabled": true,
+      "startTime": "10:00 PM"
+    }
+  ]
+}
