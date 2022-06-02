@@ -43,6 +43,16 @@
       {
         "startTime": "4:50 AM",
         "enabled": true
+      },
+      {
+        "startTime": "8:30 AM",
+        "enabled": true
+      }
+    ],
+    "Mincha": [
+      {
+        "startTime": "8:10 PM",
+        "enabled": true
       }
     ]
   },
