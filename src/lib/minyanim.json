@@ -38,6 +38,14 @@
       }
     ]
   },
+  "Shavuos": {
+    "Shacharis": [
+      {
+        "startTime": "",
+        "enabled": true
+      }
+    ]
+  },
   "Shabbos": {
     "Shacharis": [
       {
@@ -58,7 +66,7 @@
       },
       {
         "startTime": "6:00 PM",
-        "enabled": true
+        "enabled": false
       },
       {
         "enabled": false,
@@ -67,7 +75,7 @@
         "startTime": ""
       },
       {
-        "startTime": "7:15 PM",
+        "startTime": "7:40 PM",
         "enabled": true
       }
     ],
