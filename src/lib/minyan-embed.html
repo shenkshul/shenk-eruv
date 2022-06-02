@@ -116,13 +116,19 @@
 			const hebrewDayOfMonth = hdf.formatHebrewNumber(cal.getJewishDayOfMonth());
 			const hebrewMonth = hdf.formatMonth(jDate);
 
-			let dailyMinyan;
+			let dailyMinyan = null, subheadingText = null;
+
+			if (isRoshChodesh) {
+				subheadingText = 'ראש חודש';
+			}
 
 			switch (cal.getYomTovIndex()) {
 				case KosherZmanim.JewishCalendar.PURIM:
+					subheadingText = 'פורים';
 					dailyMinyan = minyanim.Purim;
 					break;
 				case KosherZmanim.JewishCalendar.SHAVUOS:
+					subheadingText = 'שבועות';
 					dailyMinyan = cal.getJewishDayOfMonth() === 6 ? minyanim.Shavuos : minyanim.Shavuos_2;
 					break;
 				case -1:
@@ -133,6 +139,7 @@
 
 			if (isErevPurim) {
 				dailyMinyan = minyanim.Erev_Purim;
+				subheadingText = 'ערב פורים';
 			}
 
 			Object.values(dailyMinyan).forEach((minyan) => {
@@ -181,19 +188,9 @@
 				headingEl.insertAdjacentText('beforeend', `${hebrewDayOfMonth + ' ' + hebrewMonth}`);
 				rootEl.insertAdjacentElement('beforeend', headingEl);
 
-				if (isRoshChodesh) {
+				if (subheadingText) {
 					const subHeadingEl = document.createElement('h3');
-					subHeadingEl.insertAdjacentText('afterbegin', 'ראש חודש');
-					rootEl.insertAdjacentElement('beforeend', subHeadingEl);
-				}
-				if (isErevPurim) {
-					const subHeadingEl = document.createElement('h3');
-					subHeadingEl.insertAdjacentText('afterbegin', 'תענית אסתר');
-					rootEl.insertAdjacentElement('beforeend', subHeadingEl);
-				}
-				if (isPurim) {
-					const subHeadingEl = document.createElement('h3');
-					subHeadingEl.insertAdjacentText('afterbegin', 'פורים');
+					subHeadingEl.insertAdjacentText('afterbegin', subheadingText);
 					rootEl.insertAdjacentElement('beforeend', subHeadingEl);
 				}
 
