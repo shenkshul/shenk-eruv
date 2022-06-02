@@ -1,0 +1,26 @@
+{
+  "Shacharis": [
+    {
+      "startTime": "8:30 AM",
+      "enabled": true
+    }
+  ],
+  "Mincha": [
+    {
+      "startTime": "8:10 PM",
+      "enabled": true
+    }
+  ],
+  "Maariv": [
+    {
+      "startTime": "9:15 PM",
+      "enabled": true
+    }
+  ],
+  "Havdala": [
+    {
+      "startTime": "9:15 PM",
+      "enabled": true
+    }
+  ]
+}
