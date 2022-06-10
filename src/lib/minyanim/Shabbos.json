@@ -18,17 +18,17 @@
     },
     {
       "startTime": "6:00 PM",
-      "enabled": false
+      "enabled": true
     },
     {
-      "enabled": false,
+      "enabled": true,
       "zmanBasedOn": "shkia",
       "minutesBeforeZman": 40,
       "startTime": ""
     },
     {
       "startTime": "7:40 PM",
-      "enabled": true
+      "enabled": false
     }
   ],
   "Maariv": [
