@@ -1,7 +1,7 @@
 {
   "Shacharis": [
     {
-      "enabled": true,
+      "enabled": false,
       "startTime": "7:10 AM",
       "minutesEarlierOnRoshChodesh": 10
     },
