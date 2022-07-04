@@ -12,6 +12,10 @@
     {
       "enabled": true,
       "startTime": "8:30 AM"
+    },
+    {
+      "startTime": "9:15 AM",
+      "enabled": true
     }
   ],
   "Mincha/Maariv": [
