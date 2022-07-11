@@ -22,6 +22,7 @@
   },
   "type": "module",
   "dependencies": {
-    "dayjs": "^1.10.7"
+    "dayjs": "^1.11.3",
+    "kosher-zmanim": "^0.8.2"
   }
 }

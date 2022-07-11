@@ -1,18 +1,13 @@
 <script>
 	import dayjs from 'dayjs';
+	import weekday from 'dayjs/plugin/weekday.js';
 	import customParseFormat from 'dayjs/plugin/customParseFormat.js';
-	import {
-		myzmanimFreeVersionEndpoint,
-		yuzmanimDataEndpoint,
-		hebcalDataEndpoint,
-		hebcalParameterBase,
-		washingtonHeightsGeonameId,
-		latitude,
-		longitude,
-		timezone
-	} from '$lib/constants.js';
+	import { latitude, longitude, timezone } from '$lib/constants.js';
+
+	import * as KosherZmanim from 'kosher-zmanim';
 
 	dayjs.extend(customParseFormat);
+	dayjs.extend(weekday);
 
 	const second = 1000;
 	const minute = second * 60;
@@ -27,44 +22,94 @@
 		return date.toDate();
 	}
 
-	let candleLightingTime;
-	let havdalaTime;
-	let shabbosShkia;
+	let hdf = new KosherZmanim.HebrewDateFormatter();
+	hdf.setHebrewFormat(true);
+
 	let earlyMinchaTime = '14:00';
-	let fridayDate;
-	let shabbosDate;
+	let fridayDate,
+		shabbosDate,
+		intDate = dayjs(),
+		parsha,
+		fridayZmanimObj,
+		fridayZmanim,
+		shabbosZmanim,
+		candleLighting,
+		fridayMincha,
+		shabbosLateMincha,
+		havdala,
+		shabbosMaariv,
+		zmanim,
+		fridayZmanDisplay,
+		shabbosZmanDisplay,
+		jcal;
 
-	$: candleLighting = {
-		value: candleLightingTime ? getDateFromTime(candleLightingTime) : null,
-		label: 'Candle lighting'
-	};
+	let date = dayjs().format('YYYY-MM-DD');
 
-	$: fridayMincha = {
-		value: candleLighting.value
-			? dayjs(candleLighting?.value?.getTime()).add(5, 'minute').toDate()
-			: null,
-		label: 'Friday mincha'
-	};
+	const zmanimCalendar = new KosherZmanim.ZmanimCalendar();
+	const geolocation = new KosherZmanim.GeoLocation(null, latitude, longitude, 0, timezone);
+	zmanimCalendar.setGeoLocation(geolocation);
 
-	$: lateMincha = {
-		value: shabbosShkia ? new Date(getDateFromTime(shabbosShkia).getTime() - 40 * minute) : null,
-		label: 'Late mincha (40 minutes before Shkia)'
-	};
-	$: earlyMincha = {
-		value: earlyMinchaTime ? getDateFromTime(earlyMinchaTime) : null,
-		label: 'Early mincha (Winter)'
-	};
+	$: {
+		intDate = date ? dayjs(date) : dayjs();
+		fridayDate = intDate.weekday(5);
+		shabbosDate = intDate.weekday(6);
+		/** @type {KosherZmanim.JewishCalendar} */
+		jcal = new KosherZmanim.JewishCalendar(shabbosDate.toDate());
+		parsha = hdf.formatParsha(jcal);
 
-	$: havdala = {
-		value: shabbosShkia ? dayjs(getDateFromTime(shabbosShkia)).add(51, 'minute').toDate() : null,
-		label: 'Havdala'
-	};
-	$: shabbosMaariv = {
-		value: shabbosShkia ? dayjs(getDateFromTime(shabbosShkia)).add(40, 'minute').toDate() : null,
-		label: 'Shabbos maariv'
-	};
+		// Friday Zmanim
+		zmanimCalendar.setDate(fridayDate.toDate());
+		fridayZmanim = {
+			Shkia: zmanimCalendar.getSunset().toISO(),
+			CandleLighting: zmanimCalendar.getCandleLighting().toISO()
+		};
 
-	$: zmanim = [candleLighting, fridayMincha, earlyMincha, lateMincha, havdala, shabbosMaariv];
+		// Shabbos Zmanim
+		zmanimCalendar.setDate(shabbosDate.toDate());
+		shabbosZmanim = {
+			Shkia: zmanimCalendar.getSunset().toISO(),
+			CandleLighting: zmanimCalendar.getCandleLighting().toISO()
+		};
+
+		candleLighting = {
+			value: dayjs(fridayZmanim.CandleLighting),
+			label: 'Candle lighting'
+		};
+
+		fridayMincha = {
+			value: dayjs(fridayZmanim.CandleLighting).add(5, 'minute'),
+			label: 'Friday mincha'
+		};
+
+		shabbosLateMincha = {
+			value: dayjs(shabbosZmanim.Shkia).subtract(40, 'minute'),
+			label: 'Shabbos Late Mincha'
+		};
+
+		havdala = {
+			value: dayjs(shabbosZmanim.Shkia).add(51, 'minute'),
+			label: 'Havdala'
+		};
+		shabbosMaariv = {
+			value: dayjs(shabbosZmanim.Shkia).add(40, 'minute'),
+			label: 'Shabbos maariv'
+		};
+
+		zmanim = [
+			candleLighting,
+			fridayMincha,
+			// earlyMincha,
+			shabbosLateMincha,
+			shabbosMaariv,
+			havdala
+		];
+
+		fridayZmanDisplay = [candleLighting,
+			fridayMincha,];
+		shabbosZmanDisplay = [shabbosLateMincha,
+			shabbosMaariv,
+			havdala];
+	}
 </script>
 
 <svelte:head>
@@ -73,46 +118,46 @@
 
 <h1>Shenk Shabbos Zmanim calculator</h1>
 
-<p>
-	Instructions: Fill out the inputs on the left with the values from <a
-		href="https://www.yuzmanim.com/zmanim">YU Zmanim</a
-	> and the resulting zmanim will display on the right
-</p>
+<h2>
+Choose a date; the table will show the Shabbos zmanim for that week.
+</h2>
 
 <div id="content">
 	<div id="editSection">
 		<label for="">
-			Candle Lighting:
-			<input type="time" bind:value={candleLightingTime} />
-		</label>
-		<!-- <label for="">
-			Havdala:
-			<input type="time" bind:value={havdalaTime} />
-		</label> -->
-		<label for="">
-			Shabbos Shkia:
-			<input type="time" bind:value={shabbosShkia} />
+			Week of:
+			<input type="date" bind:value={date} />
 		</label>
 	</div>
 
 	<div id="displaySection">
-		<ul>
-			{#each zmanim as item}
-				<li>
-					<strong>{item.label}:</strong>
-					{item?.value?.toLocaleTimeString('en', {
-						timeStyle: 'short'
-					}) ?? ''}
-				</li>
-			{/each}
-		</ul>
+		<h2>{fridayDate.format('MMMM D')} - {shabbosDate.format('D, YYYY')}, {parsha}</h2>
+			<table class="zmanTable">
+				{#each zmanim as item}
+					<tr>
+						<th>{item.label}:</th>
+						{item?.value.format('h:mm A')}
+					</tr>
+				{/each}
+			</table>
 	</div>
 </div>
+
+<h3>Calculations</h3>
+<ol>
+	<li>Friday Mincha is 5 minutes after candle lighting</li>
+	<li>Shabbos Late Mincha is 40 minutes before Shkia (sunset)</li>
+	<li>Shabbos Maariv is 40 minutes after Shkia (sunset)</li>
+	<li>Havdala is 51 minutes after Shkia (sunset)</li>
+</ol>
 
 <style>
 	#content {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
+		gap: 1em;
+		place-content: center;
+		place-items: center;
 	}
 
 	#editSection {
@@ -121,10 +166,18 @@
 		flex-direction: column;
 		align-items: flex-end;
 	}
-	ul {
-		margin: 0;
+
+	#displaySection {
+		width: 400px;
 	}
-	li {
-		list-style: none;
+
+	.zmanTable {
+		border-collapse: collapse;
+		width: 100%;
+		border: 1px solid black;
+	}
+
+	.zmanTable tr {
+		border-bottom: 1px solid black;
 	}
 </style>
