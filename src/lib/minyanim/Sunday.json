@@ -1,31 +1,31 @@
 {
-    "Shacharis": [
-        {
-            "enabled": true,
-            "startTime": "7:30 AM"
-        },
-        {
-            "enabled": true,
-            "startTime": "8:30 AM"
-        },
-        {
-            "enabled": true,
-            "startTime": "9:15 AM",
-            "notes": ""
-        }
-    ],
-    "Mincha/Maariv": [
-        {
-            "enabled": true,
-            "zmanBasedOn": "shkia",
-            "minutesBeforeZman": 15,
-            "startTime": ""
-        }
-    ],
-    "Maariv": [
-        {
-            "enabled": false,
-            "startTime": "10:00 PM"
-        }
-    ]
+  "Shacharis": [
+    {
+      "enabled": true,
+      "startTime": "7:30 AM"
+    },
+    {
+      "enabled": true,
+      "startTime": "8:45 AM"
+    },
+    {
+      "enabled": false,
+      "startTime": "9:15 AM",
+      "notes": ""
+    }
+  ],
+  "Mincha/Maariv": [
+    {
+      "enabled": true,
+      "zmanBasedOn": "shkia",
+      "minutesBeforeZman": 15,
+      "startTime": ""
+    }
+  ],
+  "Maariv": [
+    {
+      "enabled": false,
+      "startTime": "10:00 PM"
+    }
+  ]
 }
