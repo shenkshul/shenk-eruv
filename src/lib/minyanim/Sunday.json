@@ -16,10 +16,18 @@
   ],
   "Mincha/Maariv": [
     {
-      "enabled": true,
+      "enabled": false,
       "zmanBasedOn": "shkia",
       "minutesBeforeZman": 15,
       "startTime": ""
+    },
+    {
+      "startTime": "7:45 PM",
+      "enabled": true
+    },
+    {
+      "startTime": "8:25 PM",
+      "enabled": true
     }
   ],
   "Maariv": [
