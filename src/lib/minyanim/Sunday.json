@@ -28,13 +28,13 @@
     {
       "startTime": "7:45 PM",
       "enabled": true
-    },
-    {
-      "startTime": "8:25 PM",
-      "enabled": true
     }
   ],
   "Maariv": [
+    {
+      "startTime": "8:25 PM",
+      "enabled": true
+    },
     {
       "enabled": false,
       "startTime": "10:00 PM"
