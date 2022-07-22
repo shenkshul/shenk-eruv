@@ -6,35 +6,23 @@
     },
     {
       "enabled": true,
-      "startTime": "8:45 AM"
+      "startTime": "8:30 AM"
     },
     {
-      "enabled": false,
+      "enabled": true,
       "startTime": "9:15 AM",
       "notes": ""
     }
   ],
   "Mincha/Maariv": [
     {
-      "enabled": false,
+      "enabled": true,
       "zmanBasedOn": "shkia",
       "minutesBeforeZman": 15,
       "startTime": ""
-    },
-    {
-      "startTime": "6:25 PM",
-      "enabled": true
-    },
-    {
-      "startTime": "7:45 PM",
-      "enabled": true
     }
   ],
   "Maariv": [
-    {
-      "startTime": "8:25 PM",
-      "enabled": true
-    },
     {
       "enabled": false,
       "startTime": "10:00 PM"
