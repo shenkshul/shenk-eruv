@@ -62,12 +62,20 @@
 				label: 'Sof Zman Tfila Gra',
 				value: dayjs(zmanimCalendar.getSofZmanTfilaGRA()).format('h:mm A')
 			},
+			{
+				label: 'Chatzos',
+				value: dayjs(zmanimCalendar.getChatzos()).format('h:mm A')
+			},
 			{ label: 'Mincha Gedola', value: dayjs(zmanimCalendar.getMinchaGedola()).format('h:mm A') },
 			{ label: 'Plag Mincha', value: dayjs(zmanimCalendar.getPlagHamincha()).format('h:mm A') },
 			{ label: 'Shkia', value: dayjs(zmanimCalendar.getSunset()).format('h:mm A') },
 			{
 				label: 'CandleLighting',
 				value: dayjs(zmanimCalendar.getCandleLighting()).format('h:mm A')
+			},
+			{
+				label: 'Tzeis',
+				value: dayjs(zmanimCalendar.getTzais()).format('h:mm A')
 			},
 		];
 	}
