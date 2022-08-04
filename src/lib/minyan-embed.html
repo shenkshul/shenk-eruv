@@ -47,9 +47,9 @@
 	/**
 	 *
 	 * @param {string} date
-	 * @param {number} numberOfMinutes
+	 * @param {number} [numberOfMinutes = 0]
 	 */
-	const getMinutesBeforeDate = (date, numberOfMinutes) =>
+	const getMinutesBeforeDate = (date, numberOfMinutes = 0) =>
 		new Date(new Date(date).getTime() - 1_000 * 60 * numberOfMinutes);
 	/**
 	 *
@@ -82,13 +82,15 @@
 
 	let rootEl = document.createElement('section');
 
-	const daysOfMinyanimToGet = 3;
+	const daysOfMinyanimToGet = 4;
 	const minyanimToGet = [];
 	const daysToDisplay = [];
 
 	const getAndSetMinyanim = async () => {
 		const { minyanim } = await fetch(
-			'https://endearing-alpaca-667857.netlify.app/minyanim.json'
+			// 'https://endearing-alpaca-667857.netlify.app/minyanim.json'
+			'http://localhost:3000/minyanim.json'
+
 		).then((res) => res.json());
 
 		for (let idx = 0; idx < daysOfMinyanimToGet; idx++) {
@@ -134,6 +136,10 @@
 					subheadingText = 'שבועות';
 					dailyMinyan = cal.getJewishDayOfMonth() === 6 ? minyanim.Shavuos : minyanim.Shavuos_2;
 					break;
+				case KosherZmanim.JewishCalendar.TISHA_BEAV:
+					subheadingText = 'תִּשְׁעָה בְּאָב';
+					dailyMinyan = minyanim.TishaBeav;
+					break;
 				case -1:
 				default:
 					dailyMinyan = dailyMinyanim;
@@ -155,13 +161,15 @@
 					const plagMincha = zmanimCalendar.getPlagHamincha().toISO();
 					const alos = zmanimCalendar.getAlosHashachar().toISO();
 					const netz = zmanimCalendar.getSunrise().toISO();
+					const chatzos = zmanimCalendar.getChatzos().toISO();
 
 					const zmanimForCalc = {
 						candles,
 						plagMincha,
 						shkia,
 						alos,
-						netz
+						netz,
+						chatzos,
 					};
 
 					if (individualMinyan.zmanBasedOn ?? null !== null) {

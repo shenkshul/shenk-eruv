@@ -1,0 +1,41 @@
+{
+  "Shacharis": [
+    {
+      "startTime": "8:30 AM",
+      "enabled": true
+    }
+  ],
+  "Chatzos": [
+    {
+      "startTime": "1:02 PM",
+      "enabled": true,
+      "zmanBasedOn": null
+    }
+  ],
+  "Mincha": [
+    {
+      "startTime": "1:40 PM",
+      "enabled": true
+    },
+    {
+      "startTime": "5:35 PM",
+      "enabled": true
+    },
+    {
+      "startTime": "7:50 PM",
+      "enabled": true
+    }
+  ],
+  "Maariv": [
+    {
+      "startTime": "8:35 PM",
+      "enabled": true
+    }
+  ],
+  "Fast Ends": [
+    {
+      "startTime": "8:50 PM",
+      "enabled": true
+    }
+  ]
+}
