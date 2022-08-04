@@ -20,10 +20,13 @@
 
 <script>
 	const getZmanimJson = KosherZmanim.getZmanimJson;
-
 	const latitude = 40.85136738947894;
 	const longitude = -73.93145186094495;
 	const timezone = 'America/New_York';
+	
+	const zmanimCalendar = new KosherZmanim.ZmanimCalendar();
+	const geolocation = new KosherZmanim.GeoLocation(null, latitude, longitude, 0, timezone);
+	zmanimCalendar.setGeoLocation(geolocation);
 
 	const baseKosherZmanimObject = {
 		timeZoneId: timezone,
@@ -145,12 +148,13 @@
 			Object.values(dailyMinyan).forEach((minyan) => {
 				minyan.forEach((individualMinyan) => {
 					const zObj = { ...zmanimObj, currentDate };
-					const zmanim = getZmanimJson(zObj);
-					const shkia = zmanim.BasicZmanim.Sunset;
-					const candles = zmanim.BasicZmanim.CandleLighting;
-					const plagMincha = zmanim.BasicZmanim.PlagHamincha;
-					const alos = zmanim.BasicZmanim.AlosHashachar;
-					const netz = zmanim.BasicZmanim.Sunrise;
+					zmanimCalendar.setDate(currentDate);
+
+					const shkia = zmanimCalendar.getSunset().toISO();
+					const candles = zmanimCalendar.getCandleLighting().toISO();
+					const plagMincha = zmanimCalendar.getPlagHamincha().toISO();
+					const alos = zmanimCalendar.getAlosHashachar().toISO();
+					const netz = zmanimCalendar.getSunrise().toISO();
 
 					const zmanimForCalc = {
 						candles,
