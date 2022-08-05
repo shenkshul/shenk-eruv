@@ -33,10 +33,14 @@
   ],
   "Maariv": [
     {
-      "enabled": true,
+      "enabled": false,
       "zmanBasedOn": "shkia",
       "minutesBeforeZman": -40,
       "startTime": ""
+    },
+    {
+      "startTime": "9:10 PM",
+      "enabled": true
     }
   ],
   "Havdala": [
