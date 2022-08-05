@@ -1,7 +1,7 @@
 {
   "Shacharis": [
     {
-      "enabled": false,
+      "enabled": true,
       "startTime": "7:10 AM",
       "minutesEarlierOnRoshChodesh": 10
     },
@@ -21,14 +21,14 @@
       "enabled": true
     },
     {
-      "enabled": true,
+      "enabled": false,
       "zmanBasedOn": "shkia",
       "minutesBeforeZman": 40,
       "startTime": ""
     },
     {
-      "startTime": "7:40 PM",
-      "enabled": false
+      "startTime": "6:30 PM",
+      "enabled": true
     }
   ],
   "Maariv": [
