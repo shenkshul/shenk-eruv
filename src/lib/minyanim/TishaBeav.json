@@ -9,7 +9,7 @@
     {
       "startTime": "1:02 PM",
       "enabled": true,
-      "zmanBasedOn": null
+      "zmanBasedOn": "chatzos"
     }
   ],
   "Mincha": [
