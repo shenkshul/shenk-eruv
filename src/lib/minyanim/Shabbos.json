@@ -21,26 +21,18 @@
       "enabled": true
     },
     {
-      "enabled": false,
+      "enabled": true,
       "zmanBasedOn": "shkia",
       "minutesBeforeZman": 40,
       "startTime": ""
-    },
-    {
-      "startTime": "6:30 PM",
-      "enabled": true
     }
   ],
   "Maariv": [
     {
-      "enabled": false,
+      "enabled": true,
       "zmanBasedOn": "shkia",
       "minutesBeforeZman": -40,
       "startTime": ""
-    },
-    {
-      "startTime": "9:10 PM",
-      "enabled": true
     }
   ],
   "Havdala": [
