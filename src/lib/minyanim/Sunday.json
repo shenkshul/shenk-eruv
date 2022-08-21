@@ -1,7 +1,7 @@
 {
   "Shacharis": [
     {
-      "enabled": false,
+      "enabled": true,
       "startTime": "7:30 AM"
     },
     {
@@ -9,7 +9,7 @@
       "startTime": "8:30 AM"
     },
     {
-      "enabled": false,
+      "enabled": true,
       "startTime": "9:15 AM",
       "notes": ""
     }
