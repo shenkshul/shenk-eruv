@@ -23,7 +23,7 @@
     {
       "enabled": true,
       "zmanBasedOn": "shkia",
-      "minutesBeforeZman": 40,
+      "minutesBeforeZman": 60,
       "startTime": ""
     }
   ],
