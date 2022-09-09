@@ -39,7 +39,7 @@
   "Mincha/Kabalat Shabbat": [
     {
       "startTime": "6:13 PM",
-      "enabled": true,
+      "enabled": false,
       "notes": "",
       "zmanBasedOn": "plagMincha",
       "minutesBeforeZman": 15
