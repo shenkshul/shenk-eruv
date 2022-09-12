@@ -32,8 +32,8 @@
   ],
   "Maariv": [
     {
-      "enabled": false,
-      "startTime": "10:00 PM"
+      "enabled": true,
+      "startTime": "9:00 PM"
     }
   ]
 }
