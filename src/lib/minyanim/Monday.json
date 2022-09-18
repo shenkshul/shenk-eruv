@@ -1,17 +1,30 @@
 {
   "Shacharis": [
     {
-      "enabled": true,
+      "enabled": false,
       "startTime": "6:30 AM",
       "minutesEarlierOnRoshChodesh": 15
     },
     {
-      "enabled": true,
+      "enabled": false,
       "startTime": "7:30 AM"
     },
     {
-      "enabled": true,
+      "enabled": false,
       "startTime": "8:30 AM"
+    },
+    {
+      "startTime": "6:10 AM",
+      "enabled": true
+    },
+    {
+      "startTime": "7:25 AM",
+      "enabled": true
+    },
+    {
+      "startTime": "8:15 AM",
+      "enabled": true,
+      "notes": "Theater"
     }
   ],
   "Mincha/Maariv": [
