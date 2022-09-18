@@ -1,0 +1,10 @@
+{
+  "Havdala": [
+    {
+      "startTime": "",
+      "enabled": true,
+      "zmanBasedOn": "shkia",
+      "minutesBeforeZman": -51
+    }
+  ]
+}

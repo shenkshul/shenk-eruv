@@ -140,6 +140,22 @@
 					subheadingText = 'תִּשְׁעָה בְּאָב';
 					dailyMinyan = minyanim.TishaBeav;
 					break;
+				case KosherZmanim.JewishCalendar.EREV_ROSH_HASHANA:
+					subheadingText = 'ערב ראש השנה';
+					dailyMinyan = minyanim.ErevRoshHashana	
+				break;
+				case KosherZmanim.JewishCalendar.ROSH_HASHANA:
+					subheadingText = 'ראש השנה';
+					dailyMinyan = cal.getJewishDayOfMonth() === 1 ? minyanim.RoshHashana : minyanim.RoshHashana2
+				break;
+				case KosherZmanim.JewishCalendar.EREV_YOM_KIPPUR:
+					subheadingText = 'ערב יום כפור';
+					dailyMinyan = minyanim.ErevYomKippur	
+				break;
+				case KosherZmanim.JewishCalendar.YOM_KIPPUR:
+					subheadingText = 'יום כפור';
+					dailyMinyan = minyanim.YomKippur	
+				break;
 				case -1:
 				default:
 					dailyMinyan = dailyMinyanim;
@@ -226,7 +242,12 @@
 						}
 					}
 
-					rootEl.insertAdjacentElement('beforeend', list);
+					if (list.childNodes.length > 0) {
+						rootEl.insertAdjacentElement('beforeend', list);
+					} else {
+						rootEl.insertAdjacentText('beforeend', 'No zmanim/minyanim scheduled')
+					}
+
 				}
 			}
 		});

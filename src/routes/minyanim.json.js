@@ -10,21 +10,31 @@ import Shavuos_2 from '$lib/minyanim/Shavuos_2.json';
 import Erev_Purim from '$lib/minyanim/Erev_Purim.json';
 import Purim from '$lib/minyanim/Purim.json';
 import TishaBeav from '$lib/minyanim/TishaBeav.json';
+import ErevRoshHashana from '$lib/minyanim/Erev_RoshHashana.json';
+import RoshHashana from '$lib/minyanim/RoshHashana.json';
+import RoshHashana2 from '$lib/minyanim/RoshHashana2.json';
+import ErevYomKippur from '$lib/minyanim/ErevYomKippur.json';
+import YomKippur from '$lib/minyanim/YomKippur.json';
 
 const minyanim = {
-		Sunday,
-		Monday,
-		Tuesday,
-		Wednesday,
-		Thursday,
-		Friday,
-		Shabbos,
-		Shavuos,
-		Shavuos_2,
-		Erev_Purim,
-		Purim,
-		TishaBeav,
-}
+	Sunday,
+	Monday,
+	Tuesday,
+	Wednesday,
+	Thursday,
+	Friday,
+	Shabbos,
+	Shavuos,
+	Shavuos_2,
+	Erev_Purim,
+	Purim,
+	TishaBeav,
+	ErevRoshHashana,
+	RoshHashana,
+	RoshHashana2,
+	ErevYomKippur,
+	YomKippur
+};
 
 export async function get() {
 	return {

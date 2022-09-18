@@ -1,0 +1,9 @@
+{
+  "Candles": [
+    {
+      "startTime": "",
+      "enabled": true,
+      "zmanBasedOn": "candles"
+    }
+  ]
+}
