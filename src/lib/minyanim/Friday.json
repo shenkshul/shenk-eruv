@@ -22,11 +22,13 @@
     },
     {
       "startTime": "6:10 AM",
-      "enabled": true
+      "enabled": true,
+      "notes": "Slichos, folowed by Shacharis"
     },
     {
       "startTime": "7:25 AM",
-      "enabled": true
+      "enabled": true,
+      "notes": "Slichos, folowed by Shacharis"
     },
     {
       "startTime": "8:15 AM",
