@@ -3,11 +3,13 @@
     {
       "enabled": true,
       "startTime": "6:10 AM",
-      "minutesEarlierOnRoshChodesh": 15
+      "minutesEarlierOnRoshChodesh": 15,
+      "notes": "Slichos, folowed by Shacharis"
     },
     {
       "enabled": true,
-      "startTime": "7:25 AM"
+      "startTime": "7:25 AM",
+      "notes": "Slichos, folowed by Shacharis"
     },
     {
       "enabled": false,
