@@ -10,6 +10,7 @@ import Shavuos_2 from '$lib/minyanim/Shavuos_2.json';
 import Erev_Purim from '$lib/minyanim/Erev_Purim.json';
 import Purim from '$lib/minyanim/Purim.json';
 import TishaBeav from '$lib/minyanim/TishaBeav.json';
+import AsarahBeteves from '$lib/minyanim/AsarahBeteves.json';
 import TzomGedalyah from '$lib/minyanim/TzomGedalyah.json';
 import ErevRoshHashana from '$lib/minyanim/Erev_RoshHashana.json';
 import RoshHashana from '$lib/minyanim/RoshHashana.json';
@@ -35,7 +36,8 @@ const minyanim = {
 	RoshHashana,
 	RoshHashana2,
 	ErevYomKippur,
-	YomKippur
+	YomKippur,
+	AsarahBeteves,
 };
 
 export async function get() {

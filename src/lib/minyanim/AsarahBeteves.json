@@ -1,0 +1,25 @@
+{
+  "Fast Ends": [
+    {
+      "startTime": "",
+      "enabled": true,
+      "zmanBasedOn": "shkia",
+      "minutesBeforeZman": -31,
+      "notes": "R' Tukaccinsky"
+    },
+    {
+      "startTime": "",
+      "enabled": true,
+      "minutesBeforeZman": -34,
+      "notes": "R' Moshe - one who finds fasting difficult",
+      "zmanBasedOn": "shkia"
+    },
+    {
+      "startTime": "",
+      "enabled": true,
+      "minutesBeforeZman": -42,
+      "zmanBasedOn": "shkia",
+      "notes": "R' Moshe Feinstein - one who does not find fasting difficult"
+    }
+  ]
+}
