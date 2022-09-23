@@ -10,6 +10,7 @@ import Shavuos_2 from '$lib/minyanim/Shavuos_2.json';
 import Erev_Purim from '$lib/minyanim/Erev_Purim.json';
 import Purim from '$lib/minyanim/Purim.json';
 import TishaBeav from '$lib/minyanim/TishaBeav.json';
+import TzomGedalyah from '$lib/minyanim/TzomGedalyah.json';
 import ErevRoshHashana from '$lib/minyanim/Erev_RoshHashana.json';
 import RoshHashana from '$lib/minyanim/RoshHashana.json';
 import RoshHashana2 from '$lib/minyanim/RoshHashana2.json';
@@ -29,6 +30,7 @@ const minyanim = {
 	Erev_Purim,
 	Purim,
 	TishaBeav,
+	TzomGedalyah,
 	ErevRoshHashana,
 	RoshHashana,
 	RoshHashana2,

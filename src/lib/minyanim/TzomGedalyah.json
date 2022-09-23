@@ -1,0 +1,40 @@
+{
+  "Shacharis": [
+    {
+      "startTime": "5:45 AM",
+      "enabled": true
+    },
+    {
+      "startTime": "7:10 AM",
+      "enabled": true
+    },
+    {
+      "startTime": "8:00 AM",
+      "enabled": true,
+      "notes": "Theater"
+    }
+  ],
+  "Fast Ends": [
+    {
+      "startTime": "",
+      "enabled": true,
+      "zmanBasedOn": "shkia",
+      "minutesBeforeZman": -31,
+      "notes": "R' Tukaccinsky"
+    },
+    {
+      "startTime": "",
+      "enabled": true,
+      "minutesBeforeZman": -34,
+      "notes": "R' Moshe - one who finds fasting difficult",
+      "zmanBasedOn": "shkia"
+    },
+    {
+      "startTime": "",
+      "enabled": true,
+      "minutesBeforeZman": -42,
+      "zmanBasedOn": "shkia",
+      "notes": "R' Moshe Feinstein - one who does not find fasting difficult"
+    }
+  ]
+}
