@@ -1,5 +1,14 @@
 {
-  "Shacharis": [],
+  "Shacharis": [
+    {
+      "startTime": "6:00 AM",
+      "enabled": true
+    },
+    {
+      "startTime": "8:00 AM",
+      "enabled": true
+    }
+  ],
   "Candles": [
     {
       "startTime": "",
