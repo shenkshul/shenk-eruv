@@ -46,6 +46,7 @@
 
 		zmanim = [
 			{ label: 'Netz', value: dayjs(zmanimCalendar.getSunrise()).format('h:mm A') },
+			{ label: 'Alos', value: dayjs(zmanimCalendar.getAlosHashachar()).format('h:mm A') },
 			{
 				label: 'Sof Zman Krias Shema Magen Avraham',
 				value: dayjs(zmanimCalendar.getSofZmanShmaMGA()).format('h:mm A')
