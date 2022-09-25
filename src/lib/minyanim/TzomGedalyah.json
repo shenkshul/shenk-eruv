@@ -36,5 +36,12 @@
       "zmanBasedOn": "shkia",
       "notes": "R' Moshe Feinstein - one who does not find fasting difficult"
     }
+  ],
+  "Mincha": [
+    {
+      "startTime": "6:15 PM",
+      "enabled": true,
+      "notes": "Women's hataras nedarim at 6PM"
+    }
   ]
 }
