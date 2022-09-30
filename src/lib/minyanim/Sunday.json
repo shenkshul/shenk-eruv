@@ -1,17 +1,32 @@
 {
   "Shacharis": [
     {
-      "enabled": true,
+      "enabled": false,
       "startTime": "7:30 AM"
     },
     {
-      "enabled": true,
+      "enabled": false,
       "startTime": "8:30 AM"
     },
     {
-      "enabled": true,
+      "enabled": false,
       "startTime": "9:15 AM",
       "notes": ""
+    },
+    {
+      "startTime": "5:45 AM",
+      "enabled": true,
+      "notes": "Slichos, folowed by Shacharis"
+    },
+    {
+      "startTime": "7:10 AM",
+      "enabled": true,
+      "notes": "Slichos, folowed by Shacharis"
+    },
+    {
+      "startTime": "8:00 AM",
+      "enabled": true,
+      "notes": "Slichos in Theater, followed by Shacharis in Sanctuary"
     }
   ],
   "Mincha/Maariv": [
