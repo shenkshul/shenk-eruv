@@ -1,24 +1,32 @@
 {
   "Shacharis": [
     {
-      "enabled": true,
-      "startTime": "6:10 AM",
-      "minutesEarlierOnRoshChodesh": 15,
-      "notes": "Slichos, folowed by Shacharis"
+      "startTime": "6:30 AM",
+      "enabled": false
     },
     {
-      "enabled": true,
-      "startTime": "7:25 AM",
-      "notes": "Slichos, folowed by Shacharis"
+      "startTime": "7:30 AM",
+      "enabled": false
     },
     {
       "enabled": false,
       "startTime": "8:30 AM"
     },
     {
-      "startTime": "8:25 AM",
       "enabled": true,
-      "notes": "Slichos in Theater, followed by Shacharis in Sanctuary"
+      "startTime": "6:20 AM",
+      "minutesEarlierOnRoshChodesh": 15,
+      "notes": "Slichos, folowed by Shacharis"
+    },
+    {
+      "enabled": true,
+      "startTime": "7:20 AM",
+      "notes": "Slichos, folowed by Shacharis"
+    },
+    {
+      "startTime": "8:20 AM",
+      "enabled": true,
+      "notes": "Slichos, followed by Shacharis"
     }
   ],
   "Mincha/Maariv": [
