@@ -1,3 +1,34 @@
 {
-  "Havdala": []
+  "Havdala": [],
+  "Shacharis": [
+    {
+      "startTime": "8:00 AM",
+      "enabled": true
+    }
+  ],
+  "Mincha": [
+    {
+      "startTime": "4:15 PM",
+      "enabled": true
+    }
+  ],
+  "Neila": [
+    {
+      "startTime": "5:30 PM",
+      "enabled": true,
+      "notes": "Approximately "
+    }
+  ],
+  "Maariv": [
+    {
+      "startTime": "7:12 PM",
+      "enabled": true
+    }
+  ],
+  "Fast Ends": [
+    {
+      "startTime": "7:12 PM",
+      "enabled": true
+    }
+  ]
 }
