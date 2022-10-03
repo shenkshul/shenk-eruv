@@ -19,5 +19,21 @@
       "startTime": "8:15 AM",
       "enabled": true
     }
+  ],
+  "Mincha": [
+    {
+      "startTime": "2:30 PM",
+      "enabled": true
+    },
+    {
+      "startTime": "4:00 PM",
+      "enabled": true
+    }
+  ],
+  "Maariv": [
+    {
+      "startTime": "6:20 PM",
+      "enabled": true
+    }
   ]
 }
