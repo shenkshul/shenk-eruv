@@ -1,31 +1,31 @@
 {
   "Shacharis": [
     {
-      "enabled": false,
+      "enabled": true,
       "startTime": "7:30 AM"
     },
     {
-      "enabled": false,
+      "enabled": true,
       "startTime": "8:30 AM"
     },
     {
-      "enabled": false,
+      "enabled": true,
       "startTime": "9:15 AM",
       "notes": ""
     },
     {
       "startTime": "7:00 AM",
-      "enabled": true,
+      "enabled": false,
       "notes": "Slichos, folowed by Shacharis"
     },
     {
       "startTime": "8:15 AM",
-      "enabled": true,
+      "enabled": false,
       "notes": "Slichos, folowed by Shacharis"
     },
     {
       "startTime": "9:00 AM",
-      "enabled": true,
+      "enabled": false,
       "notes": "Slichos followed by Shacharis, in Theater"
     }
   ],
