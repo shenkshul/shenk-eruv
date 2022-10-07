@@ -23,7 +23,7 @@
 	const latitude = 40.85136738947894;
 	const longitude = -73.93145186094495;
 	const timezone = 'America/New_York';
-	
+
 	const zmanimCalendar = new KosherZmanim.ZmanimCalendar();
 	const geolocation = new KosherZmanim.GeoLocation(null, latitude, longitude, 0, timezone);
 	zmanimCalendar.setGeoLocation(geolocation);
@@ -121,7 +121,8 @@
 			const hebrewDayOfMonth = hdf.formatHebrewNumber(cal.getJewishDayOfMonth());
 			const hebrewMonth = hdf.formatMonth(jDate);
 
-			let dailyMinyan = null, subheadingText = null;
+			let dailyMinyan = null,
+				subheadingText = null;
 
 			if (isRoshChodesh) {
 				subheadingText = 'ראש חודש';
@@ -149,21 +150,35 @@
 					dailyMinyan = minyanim.AsarahBeteves;
 					break;
 				case KosherZmanim.JewishCalendar.EREV_ROSH_HASHANA:
-					subheadingText = 'ערב ראש השנה';
-					dailyMinyan = minyanim.ErevRoshHashana	
-				break;
+					subheadingText = 'עֶרֶב ראש השנה';
+					dailyMinyan = minyanim.ErevRoshHashana;
+					break;
+				case KosherZmanim.JewishCalendar.EREV_SUCCOS:
+					subheadingText = 'עֶרֶב סֻכּוֹת';
+					dailyMinyan = minyanim.ErevSuccos;
+					break;
 				case KosherZmanim.JewishCalendar.ROSH_HASHANA:
 					subheadingText = 'ראש השנה';
-					dailyMinyan = cal.getJewishDayOfMonth() === 1 ? minyanim.RoshHashana : minyanim.RoshHashana2
-				break;
+					dailyMinyan =
+						cal.getJewishDayOfMonth() === 1 ? minyanim.RoshHashana : minyanim.RoshHashana2;
+					break;
+				case KosherZmanim.JewishCalendar.SUCCOS:
+					subheadingText = 'סֻכּוֹת';
+					dailyMinyan = cal.getJewishDayOfMonth() === 15 ? minyanim.Succos : minyanim.Succos2;
+					break;
+				case KosherZmanim.JewishCalendar.CHOL_HAMOED_SUCCOS:
+					subheadingText = 'חֹל הַמוֹעֵד סֻכּוֹת';
+					dailyMinyan =
+						cal.getDayOfWeek() === 7 ? minyanim.ShabbosCholHamoedSuccos : minyanim.CholHamoedSuccos;
+					break;
 				case KosherZmanim.JewishCalendar.EREV_YOM_KIPPUR:
-					subheadingText = 'ערב יום כפור';
-					dailyMinyan = minyanim.ErevYomKippur	
-				break;
+					subheadingText = 'עֶרֶב יום כפור';
+					dailyMinyan = minyanim.ErevYomKippur;
+					break;
 				case KosherZmanim.JewishCalendar.YOM_KIPPUR:
 					subheadingText = 'יום כפור';
-					dailyMinyan = minyanim.YomKippur	
-				break;
+					dailyMinyan = minyanim.YomKippur;
+					break;
 				case -1:
 				default:
 					dailyMinyan = dailyMinyanim;
@@ -172,9 +187,24 @@
 
 			if (isErevPurim) {
 				dailyMinyan = minyanim.Erev_Purim;
-				subheadingText = 'ערב פורים';
+				subheadingText = 'עֶרֶב פורים';
 			}
 
+			if (!dailyMinyan) {
+				dailyMinyan = {};
+			}
+
+			if (cal.hasCandleLighting()) {
+				if (!dailyMinyan?.Candles) {
+					dailyMinyan.Candles = [
+						{
+							startTime: '',
+							enabled: true,
+							zmanBasedOn: 'candles'
+						}
+					];
+				}
+			}
 			Object.values(dailyMinyan).forEach((minyan) => {
 				minyan.forEach((individualMinyan) => {
 					const zObj = { ...zmanimObj, currentDate };
@@ -193,7 +223,7 @@
 						shkia,
 						alos,
 						netz,
-						chatzos,
+						chatzos
 					};
 
 					if (individualMinyan.zmanBasedOn ?? null !== null) {
@@ -230,32 +260,36 @@
 					rootEl.insertAdjacentElement('beforeend', subHeadingEl);
 				}
 
-				for (const [minyanName, minyanInfo] of Object.entries(dailyMinyan)) {
-					const minyanTitle = document.createElement('h2');
-					minyanTitle.insertAdjacentText('afterbegin', minyanName);
-					rootEl.insertAdjacentElement('beforeend', minyanTitle);
+				const minyanimEntries = Object.entries(dailyMinyan);
+				if (minyanimEntries.length) {
+					for (const [minyanName, minyanInfo] of minyanimEntries) {
+						const minyanTitle = document.createElement('h2');
+						minyanTitle.insertAdjacentText('afterbegin', minyanName);
+						rootEl.insertAdjacentElement('beforeend', minyanTitle);
 
-					const list = document.createElement('ol');
+						const list = document.createElement('ol');
 
-					for (const minyan of minyanInfo) {
-						if (minyan.enabled) {
-							const li = document.createElement('li');
-							li.insertAdjacentText('afterbegin', minyan.startTime);
+						for (const minyan of minyanInfo) {
+							if (minyan.enabled) {
+								const li = document.createElement('li');
+								li.insertAdjacentText('afterbegin', minyan.startTime);
 
-							if (minyan.notes) {
-								li.insertAdjacentText('beforeend', ` (${minyan.notes})`);
+								if (minyan.notes) {
+									li.insertAdjacentText('beforeend', ` (${minyan.notes})`);
+								}
+
+								list.insertAdjacentElement('beforeend', li);
 							}
+						}
 
-							list.insertAdjacentElement('beforeend', li);
+						if (list.childNodes.length > 0) {
+							rootEl.insertAdjacentElement('beforeend', list);
+						} else {
+							rootEl.insertAdjacentText('beforeend', 'No zmanim/minyanim scheduled');
 						}
 					}
-
-					if (list.childNodes.length > 0) {
-						rootEl.insertAdjacentElement('beforeend', list);
-					} else {
-						rootEl.insertAdjacentText('beforeend', 'No zmanim/minyanim scheduled')
-					}
-
+				} else {
+					rootEl.insertAdjacentText('beforeend', 'No zmanim/minyanim scheduled');
 				}
 			}
 		});
