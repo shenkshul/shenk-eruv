@@ -39,7 +39,7 @@
   "Candles": [
     {
       "startTime": "",
-      "enabled": true,
+      "enabled": false,
       "zmanBasedOn": "plagMincha",
       "notes": "not before",
       "minutesBeforeZman": 0
