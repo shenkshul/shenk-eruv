@@ -17,6 +17,7 @@ import ErevSuccos from '$lib/minyanim/Erev_Succos.json';
 import Succos from '$lib/minyanim/Succos.json';
 import Succos2 from '$lib/minyanim/Succos2.json';
 import CholHamoedSuccos from '$lib/minyanim/CholHamoedSuccos.json';
+import HoshanaRabba from '$lib/minyanim/HoshanaRabba.json';
 import ShabbosCholHamoedSuccos from '$lib/minyanim/ShabbosCholHamoedSuccos.json';
 import RoshHashana from '$lib/minyanim/RoshHashana.json';
 import RoshHashana2 from '$lib/minyanim/RoshHashana2.json';
@@ -47,6 +48,7 @@ const minyanim = {
 	Succos,
 	Succos2,
 	CholHamoedSuccos,
+	HoshanaRabba,
 	ShabbosCholHamoedSuccos,
 };
 

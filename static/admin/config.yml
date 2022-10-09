@@ -2461,6 +2461,106 @@ collections:
               hint: "Use negative values for minutes after the zman"
               widget: number
               required: false
+      - name: Hoshana Rabba
+        file: src/lib/minyanim/HoshanaRabba.json
+        label: Hoshana Rabba
+        fields:
+          - label: Shacharis
+            name: Shacharis
+            collapsed: false
+            widget: list
+            fields:
+            - label: Start Time
+              name: startTime
+              widget: datetime
+              default: ""
+              format: h:mm A 
+              date_format: false
+              time_format: h:mm A
+              required: false
+            - label: Enabled
+              name: enabled
+              widget: boolean
+              default: true
+            - label: Notes
+              name: notes
+              widget: string
+              required: false
+            - label: Based on a zman
+              hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+              name: zmanBasedOn
+              widget: select
+              options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Minutes before Zman
+              name: minutesBeforeZman
+              hint: "Use negative values for minutes after the zman"
+              widget: number
+              required: false
+          - label: Mincha
+            name: Mincha
+            collapsed: false
+            widget: list
+            fields:
+            - label: Start Time
+              name: startTime
+              widget: datetime
+              default: ""
+              format: h:mm A 
+              date_format: false
+              time_format: h:mm A
+              required: false
+            - label: Enabled
+              name: enabled
+              widget: boolean
+              default: true
+            - label: Notes
+              name: notes
+              widget: string
+              required: false
+            - label: Based on a zman
+              hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+              name: zmanBasedOn
+              widget: select
+              options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Minutes before Zman
+              name: minutesBeforeZman
+              hint: "Use negative values for minutes after the zman"
+              widget: number
+              required: false
+          - label: Maariv
+            name: Maariv
+            collapsed: false
+            widget: list
+            fields:
+            - label: Start Time
+              name: startTime
+              widget: datetime
+              default: ""
+              format: h:mm A 
+              date_format: false
+              time_format: h:mm A
+              required: false
+            - label: Enabled
+              name: enabled
+              widget: boolean
+              default: true
+            - label: Notes
+              name: notes
+              widget: string
+              required: false
+            - label: Based on a zman
+              hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
+              name: zmanBasedOn
+              widget: select
+              options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Minutes before Zman
+              name: minutesBeforeZman
+              hint: "Use negative values for minutes after the zman"
+              widget: number
+              required: false
       - name: Shabbos Chol Hamoed Succos
         file: src/lib/minyanim/ShabbosCholHamoedSuccos.json
         label: Shabbos Chol Hamoed Succos
