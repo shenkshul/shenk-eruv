@@ -8,5 +8,14 @@
       "startTime": "8:00 AM",
       "enabled": true
     }
+  ],
+  "Mincha": [
+    {
+      "startTime": "",
+      "enabled": true,
+      "zmanBasedOn": "shkia",
+      "minutesBeforeZman": 15,
+      "notes": "Maariv to follow "
+    }
   ]
 }
