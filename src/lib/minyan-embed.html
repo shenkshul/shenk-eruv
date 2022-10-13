@@ -57,6 +57,20 @@
 	 */
 	const getFiveMinutesAfterCandles = (date) => new Date(new Date(date).getTime() + 1_000 * 60 * 5);
 
+	const orderOfZmanim = [
+		'Shacharis',
+		'Chatzos',
+		'Mincha',
+		'Mincha/Maariv',
+		'Neila',
+		'Maariv',
+		'Candles',
+		'Mincha/Kabalat Shabbat',
+		'Havdalah',
+		'Fast Ends',
+		'Megillah Only'
+	];
+
 	function convertTime12to24(d, time12h) {
 		const [time, modifier] = time12h.split(' ');
 
@@ -264,7 +278,10 @@
 					rootEl.insertAdjacentElement('beforeend', subHeadingEl);
 				}
 
-				const minyanimEntries = Object.entries(dailyMinyan);
+				const minyanimEntries = Object.entries(dailyMinyan).sort((a, b) => {
+					return orderOfZmanim.indexOf(a[0]) - orderOfZmanim.indexOf(b[0]);
+				});
+				console.log(JSON.stringify(minyanimEntries));
 				if (minyanimEntries.length) {
 					for (const [minyanName, minyanInfo] of minyanimEntries) {
 						const minyanTitle = document.createElement('h2');
