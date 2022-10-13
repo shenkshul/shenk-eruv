@@ -1,12 +1,4 @@
 {
-  "Havdala": [
-    {
-      "startTime": "",
-      "enabled": true,
-      "minutesBeforeZman": -51,
-      "zmanBasedOn": "shkia"
-    }
-  ],
   "Shacharis": [
     {
       "startTime": "8:45 AM",
@@ -17,6 +9,20 @@
     {
       "startTime": "5:15 PM",
       "enabled": true
+    }
+  ],
+  "Maariv": [
+    {
+      "startTime": "6:58 PM",
+      "enabled": true
+    }
+  ],
+  "Havdala": [
+    {
+      "startTime": "",
+      "enabled": true,
+      "minutesBeforeZman": -51,
+      "zmanBasedOn": "shkia"
     }
   ]
 }
