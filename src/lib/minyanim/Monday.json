@@ -46,7 +46,14 @@
       "enabled": false
     }
   ],
-  "Maariv": [
+  "Candles": [
+    {
+      "startTime": "6:53 PM",
+      "enabled": true,
+      "notes": "not before"
+    }
+  ],
+"Maariv": [
     {
       "enabled": false,
       "startTime": "10:00 PM"
