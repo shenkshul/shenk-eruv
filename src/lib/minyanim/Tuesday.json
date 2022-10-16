@@ -2,11 +2,11 @@
   "Shacharis": [
     {
       "startTime": "6:30 AM",
-      "enabled": true
+      "enabled": false
     },
     {
       "startTime": "7:30 AM",
-      "enabled": true
+      "enabled": false
     },
     {
       "enabled": true,
@@ -31,7 +31,7 @@
   ],
   "Mincha/Maariv": [
     {
-      "enabled": true,
+      "enabled": false,
       "zmanBasedOn": "shkia",
       "minutesBeforeZman": 15,
       "startTime": ""
@@ -45,6 +45,10 @@
     {
       "enabled": false,
       "startTime": "10:00 PM"
+    },
+    {
+      "startTime": "6:42 PM",
+      "enabled": true
     }
   ]
 }
