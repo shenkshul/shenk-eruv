@@ -35,10 +35,6 @@
       "zmanBasedOn": "shkia",
       "minutesBeforeZman": 15,
       "startTime": ""
-    },
-    {
-      "startTime": "7:20 AM",
-      "enabled": false
     }
   ],
   "Maariv": [
