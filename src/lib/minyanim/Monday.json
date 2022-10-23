@@ -1,16 +1,16 @@
 {
   "Shacharis": [
     {
-      "enabled": false,
+      "enabled": true,
       "startTime": "6:30 AM",
       "minutesEarlierOnRoshChodesh": 15
     },
     {
-      "enabled": false,
+      "enabled": true,
       "startTime": "7:30 AM"
     },
     {
-      "enabled": false,
+      "enabled": true,
       "startTime": "8:30 AM"
     },
     {
@@ -27,16 +27,11 @@
       "startTime": "8:00 AM",
       "enabled": false,
       "notes": "Slichos, in Theater"
-    },
-    {
-      "startTime": "9:00 AM",
-      "enabled": true,
-      "notes": "Yizkor not before 10:20 AM"
     }
   ],
   "Mincha/Maariv": [
     {
-      "enabled": false,
+      "enabled": true,
       "zmanBasedOn": "shkia",
       "minutesBeforeZman": 15,
       "startTime": ""
@@ -53,14 +48,14 @@
       "notes": "not before"
     }
   ],
-"Maariv": [
+  "Maariv": [
     {
       "enabled": false,
       "startTime": "10:00 PM"
     },
     {
       "startTime": "6:30 PM",
-      "enabled": true,
+      "enabled": false,
       "notes": "Approximately [Maariv and Hakafos]"
     }
   ]
