@@ -43,12 +43,13 @@
   ],
   "Maariv": [
     {
+      "startTime": "",
       "enabled": true,
-      "startTime": "10:00 PM"
+      "zmanBasedOn": "shkia"
     },
     {
-      "startTime": "6:42 PM",
-      "enabled": false
+      "enabled": true,
+      "startTime": "10:00 PM"
     }
   ]
 }
