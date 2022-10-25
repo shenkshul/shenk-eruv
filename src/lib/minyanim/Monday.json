@@ -43,13 +43,13 @@
   ],
   "Maariv": [
     {
+      "startTime": "",
       "enabled": true,
-      "startTime": "10:00 PM"
+      "zmanBasedOn": "shkia"
     },
     {
-      "startTime": "6:30 PM",
-      "enabled": false,
-      "notes": "Approximately [Maariv and Hakafos]"
+      "enabled": true,
+      "startTime": "10:00 PM"
     }
   ]
 }
