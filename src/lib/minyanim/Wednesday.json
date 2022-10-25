@@ -39,6 +39,11 @@
   ],
   "Maariv": [
     {
+      "startTime": "",
+      "enabled": true,
+      "zmanBasedOn": "shkia"
+    },
+    {
       "enabled": true,
       "startTime": "10:00 PM"
     }
