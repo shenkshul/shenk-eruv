@@ -29,7 +29,7 @@
       "notes": "Slichos in Theater, followed by Shacharis in Sanctuary"
     }
   ],
-  "Mincha/Maariv": [
+  "Mincha": [
     {
       "enabled": true,
       "zmanBasedOn": "shkia",
@@ -41,7 +41,8 @@
     {
       "startTime": "",
       "enabled": true,
-      "zmanBasedOn": "shkia"
+      "zmanBasedOn": "shkia",
+      "rounding": "up"
     },
     {
       "enabled": true,

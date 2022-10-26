@@ -60,6 +60,12 @@ collections:
                 widget: select
                 options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
                 required: false
+              - label: Rounding rules
+                hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+                name: rounding
+                widget: select
+                options: ['none', 'up', 'down']
+                required: false
               - label: Minutes before Zman
                 name: minutesBeforeZman
                 hint: "Use negative values for minutes after the zman"
@@ -70,8 +76,8 @@ collections:
                 hint: "Use negative values if the start time should be later"
                 widget: number
                 required: false
-            - label: Mincha/Maariv
-              name: Mincha/Maariv
+            - label: Mincha
+              name: Mincha
               collapsed: false
               widget: list
               fields:
@@ -96,6 +102,12 @@ collections:
                 name: zmanBasedOn
                 widget: select
                 options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+                required: false
+              - label: Rounding rules
+                hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+                name: rounding
+                widget: select
+                options: ['none', 'up', 'down']
                 required: false
               - label: Minutes before Zman
                 name: minutesBeforeZman
@@ -133,6 +145,12 @@ collections:
                 name: zmanBasedOn
                 widget: select
                 options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+                required: false
+              - label: Rounding rules
+                hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+                name: rounding
+                widget: select
+                options: ['none', 'up', 'down']
                 required: false
               - label: Minutes before Zman
                 name: minutesBeforeZman
@@ -175,6 +193,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -185,8 +209,8 @@ collections:
               hint: "Use negative values if the start time should be later"
               widget: number
               required: false
-          - label: Mincha/Maariv
-            name: Mincha/Maariv
+          - label: Mincha
+            name: Mincha
             collapsed: false
             widget: list
             fields:
@@ -211,6 +235,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -248,6 +278,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -290,6 +326,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -300,8 +342,8 @@ collections:
               hint: "Use negative values if the start time should be later"
               widget: number
               required: false
-          - label: Mincha/Maariv
-            name: Mincha/Maariv
+          - label: Mincha
+            name: Mincha
             collapsed: false
             widget: list
             fields:
@@ -326,6 +368,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -363,6 +411,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -405,6 +459,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -415,8 +475,8 @@ collections:
               hint: "Use negative values if the start time should be later"
               widget: number
               required: false
-          - label: Mincha/Maariv
-            name: Mincha/Maariv
+          - label: Mincha
+            name: Mincha
             collapsed: false
             widget: list
             fields:
@@ -441,6 +501,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -478,6 +544,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -520,6 +592,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -530,8 +608,8 @@ collections:
               hint: "Use negative values if the start time should be later"
               widget: number
               required: false
-          - label: Mincha/Maariv
-            name: Mincha/Maariv
+          - label: Mincha
+            name: Mincha
             collapsed: false
             widget: list
             fields:
@@ -556,6 +634,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -593,6 +677,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -635,6 +725,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -672,6 +768,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -708,6 +810,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -750,6 +858,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -786,6 +900,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -824,6 +944,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -860,6 +986,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -905,6 +1037,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -936,6 +1074,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -969,6 +1113,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -1001,6 +1151,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -1032,6 +1188,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -1069,6 +1231,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -1100,6 +1268,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -1133,6 +1307,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -1164,6 +1344,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -1201,6 +1387,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -1232,6 +1424,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -1265,6 +1463,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -1296,6 +1500,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -1336,6 +1546,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -1367,6 +1583,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -1400,6 +1622,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -1431,6 +1659,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -1468,6 +1702,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -1500,37 +1740,11 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
-            - label: Minutes before Zman
-              name: minutesBeforeZman
-              hint: "Use negative values for minutes after the zman"
-              widget: number
-              required: false
-          - label: Mincha/Maariv
-            name: Mincha/Maariv
-            collapsed: false
-            widget: list
-            fields:
-            - label: Start Time
-              name: startTime
-              widget: datetime
-              default: ""
-              format: h:mm A 
-              date_format: false
-              time_format: h:mm A
-              required: false
-            - label: Enabled
-              name: enabled
-              widget: boolean
-              default: true
-            - label: Notes
-              name: notes
-              widget: string
-              required: false
-            - label: Based on a zman
-              hint: If this item should be based on a zman (e.g. 5 minutes after Shkia), choose that here
-              name: zmanBasedOn
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
               widget: select
-              options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -1563,6 +1777,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -1600,6 +1820,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -1631,6 +1857,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -1664,6 +1896,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -1695,6 +1933,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -1732,6 +1976,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -1763,6 +2013,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -1796,6 +2052,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -1827,6 +2089,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -1864,6 +2132,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -1895,6 +2169,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -1928,6 +2208,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -1959,6 +2245,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -1996,6 +2288,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -2027,6 +2325,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -2060,6 +2364,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -2091,6 +2401,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -2128,6 +2444,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -2159,6 +2481,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -2192,6 +2520,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -2223,6 +2557,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -2260,6 +2600,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -2291,6 +2637,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -2324,6 +2676,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -2355,6 +2713,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -2392,6 +2756,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -2424,6 +2794,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -2455,6 +2831,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -2492,6 +2874,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -2524,6 +2912,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -2555,6 +2949,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -2592,6 +2992,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -2623,6 +3029,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -2656,6 +3068,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -2687,6 +3105,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -2724,6 +3148,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -2755,6 +3185,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -2788,6 +3224,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -2819,6 +3261,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -2856,6 +3304,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -2887,6 +3341,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -2920,6 +3380,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -2951,6 +3417,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -2988,6 +3460,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -3019,6 +3497,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -3052,6 +3536,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -3083,6 +3573,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -3120,6 +3616,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -3151,6 +3653,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -3184,6 +3692,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -3215,6 +3729,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
@@ -3248,6 +3768,12 @@ collections:
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
               required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
+              required: false
             - label: Minutes before Zman
               name: minutesBeforeZman
               hint: "Use negative values for minutes after the zman"
@@ -3279,6 +3805,12 @@ collections:
               name: zmanBasedOn
               widget: select
               options: ['candles', 'shkia', 'plagMincha', 'alos', 'netz', 'chatzos']
+              required: false
+            - label: Rounding rules
+              hint: Choose if you want to round seconds up or down (default is to ignore seconds completely. Only applies if item is based on a zman)
+              name: rounding
+              widget: select
+              options: ['none', 'up', 'down']
               required: false
             - label: Minutes before Zman
               name: minutesBeforeZman

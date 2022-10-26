@@ -57,6 +57,20 @@
 	 */
 	const getFiveMinutesAfterCandles = (date) => new Date(new Date(date).getTime() + 1_000 * 60 * 5);
 
+	function roundUpToNearestMinute(date) {
+		const minutes = 1;
+		const ms = 1000 * 60 * minutes;
+
+		return new Date(Math.ceil(date.getTime() / ms) * ms);
+	}
+	
+	function roundDownToNearestMinute(date) {
+		const minutes = 1;
+		const ms = 1000 * 60 * minutes;
+
+		return new Date(Math.floor(date.getTime() / ms) * ms);
+	}
+
 	const orderOfZmanim = [
 		'Shacharis',
 		'Chatzos',
@@ -247,7 +261,12 @@
 					if (individualMinyan.zmanBasedOn ?? null !== null) {
 						const zman = zmanimForCalc[individualMinyan.zmanBasedOn];
 						const { minutesBeforeZman } = individualMinyan;
-						const minyanTime = getMinutesBeforeDate(zman, minutesBeforeZman);
+						let minyanTime = getMinutesBeforeDate(zman, minutesBeforeZman);
+						if (individualMinyan.rounding === 'up') {
+							minyanTime = roundUpToNearestMinute(minyanTime);
+						} else if (individualMinyan.rounding === 'down') {
+							minyanTime = roundDownToNearestMinute(minyanTime);
+						}
 						individualMinyan.startTime = getDisplayTime(minyanTime);
 					}
 
@@ -281,7 +300,6 @@
 				const minyanimEntries = Object.entries(dailyMinyan).sort((a, b) => {
 					return orderOfZmanim.indexOf(a[0]) - orderOfZmanim.indexOf(b[0]);
 				});
-				console.log(JSON.stringify(minyanimEntries));
 				if (minyanimEntries.length) {
 					for (const [minyanName, minyanInfo] of minyanimEntries) {
 						const minyanTitle = document.createElement('h2');
