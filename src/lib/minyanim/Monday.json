@@ -49,7 +49,7 @@
       "rounding": "up"
     },
     {
-      "enabled": true,
+      "enabled": false,
       "startTime": "10:00 PM"
     }
   ]
