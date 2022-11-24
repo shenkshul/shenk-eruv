@@ -13,7 +13,7 @@
   ],
   "Mincha": [
     {
-      "enabled": true,
+      "enabled": false,
       "startTime": "2:00 PM"
     },
     {
