@@ -2,15 +2,18 @@
   "Shacharis": [
     {
       "startTime": "6:30 AM",
-      "enabled": true
+      "enabled": true,
+      "notes": "Theater"
     },
     {
-      "startTime": "7:30 AM",
-      "enabled": true
+      "startTime": "7:15 AM",
+      "enabled": true,
+      "notes": "Bris Minyan"
     },
     {
       "startTime": "8:30 AM",
-      "enabled": true
+      "enabled": true,
+      "notes": "Theater"
     },
     {
       "enabled": false,
