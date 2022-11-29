@@ -7,11 +7,13 @@
     },
     {
       "enabled": true,
-      "startTime": "7:25 AM"
+      "startTime": "7:30 AM",
+      "notes": "Bris"
     },
     {
       "enabled": true,
-      "startTime": "8:30 AM"
+      "startTime": "8:30 AM",
+      "notes": "Theater"
     },
     {
       "startTime": "5:45 AM",
