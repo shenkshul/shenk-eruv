@@ -51,6 +51,12 @@
       "startTime": ""
     }
   ],
+  "Mincha": [
+    {
+      "enabled": true,
+      "startTime": "1:00 PM"
+    }
+  ],
   "Mincha/Kabalat Shabbat": [
     {
       "startTime": "6:13 PM",
