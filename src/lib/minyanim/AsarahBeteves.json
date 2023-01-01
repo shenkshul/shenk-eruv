@@ -21,5 +21,25 @@
       "zmanBasedOn": "shkia",
       "notes": "R' Moshe Feinstein - one who does not find fasting difficult"
     }
+  ],
+  "Shacharis": [
+    {
+      "startTime": "6:15 AM",
+      "enabled": true
+    },
+    {
+      "startTime": "7:25 AM",
+      "enabled": true
+    },
+    {
+      "startTime": "8:30 AM",
+      "enabled": true
+    }
+  ],
+  "Mincha": [
+    {
+      "startTime": "4:10 PM",
+      "enabled": true
+    }
   ]
 }
