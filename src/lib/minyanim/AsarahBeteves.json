@@ -1,22 +1,22 @@
 {
   "Fast Ends": [
     {
-      "startTime": "",
+      "startTime": "5:19 PM",
       "enabled": true,
-      "zmanBasedOn": "shkia",
-      "minutesBeforeZman": -31,
-      "notes": "R' Tukaccinsky"
+      "zmanBasedOn": null,
+      "minutesBeforeZman": "",
+      "notes": ""
     },
     {
       "startTime": "",
-      "enabled": true,
+      "enabled": false,
       "minutesBeforeZman": -34,
       "notes": "R' Moshe - one who finds fasting difficult",
       "zmanBasedOn": "shkia"
     },
     {
       "startTime": "",
-      "enabled": true,
+      "enabled": false,
       "minutesBeforeZman": -42,
       "zmanBasedOn": "shkia",
       "notes": "R' Moshe Feinstein - one who does not find fasting difficult"
