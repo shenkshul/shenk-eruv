@@ -118,10 +118,10 @@
 </script>
 
 <svelte:head>
-	<title>Shenk Shabbos Zmanim calculator</title>
+	<title>Shenk Yearly Zmanim calculator</title>
 </svelte:head>
 
-<h1>Shenk Shabbos Zmanim calculator</h1>
+<h1>Shenk Yearly Zmanim calculator</h1>
 
 <h2>
 	Choose a date and number of weeks; the table will show the Candle lighting and havdala times for
@@ -134,7 +134,10 @@
 			Starting week
 			<input type="date" bind:value={date} />
 		</label>
-		<input type="number" bind:value={numberOfWeeks} />
+		<label for="">
+
+			Number of weeks: <input type="number" bind:value={numberOfWeeks} style="inline-size: 3em;" />
+		</label>
 	</div>
 
 	<div id="displaySection">
