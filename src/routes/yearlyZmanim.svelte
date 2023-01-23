@@ -9,7 +9,6 @@
 	dayjs.extend(customParseFormat);
 	dayjs.extend(weekday);
 
-
 	let hdf = new KosherZmanim.HebrewDateFormatter();
 	hdf.setHebrewFormat(true);
 
@@ -35,7 +34,7 @@
 	let yearZmanim = [];
 
 	const dateFormat = 'MMM DD, YYYY';
-	
+
 	$: {
 		intDate = date ? dayjs(date) : dayjs();
 		yearZmanim = [];
@@ -59,7 +58,9 @@
 						},
 						havdala: {
 							value:
-								potentialYomTov.isErevYomTov() || internalDate.day() === 5 || potentialYomTov.isErevYomTovSheni()
+								potentialYomTov.isErevYomTov() ||
+								internalDate.day() === 5 ||
+								potentialYomTov.isErevYomTovSheni()
 									? null
 									: dayjs(zmanimCalendar.getSunset()).add(51, 'minute')
 						}
@@ -68,6 +69,10 @@
 			}
 
 			parsha = hdf.formatParsha(jcal);
+			if (hdf.formatSpecialParsha(jcal).length > 0) {
+				parsha += ` (${hdf.formatSpecialParsha(jcal)})`;
+			}
+
 			if (parsha.length < 1) {
 				parsha = 'שבת ' + hdf.formatYomTov(jcal);
 				console.log(hdf.formatYomTov(jcal));
@@ -101,13 +106,13 @@
 				date: fridayDate.format(dateFormat),
 				parsha,
 				candleLighting,
-				havdala: (jcal.isErevYomTov() || jcal.isErevYomTovSheni()) ? null : havdala
+				havdala: jcal.isErevYomTov() || jcal.isErevYomTovSheni() ? null : havdala
 			};
 
 			yearZmanim.push(zmanim);
 		}
-		yearZmanim = yearZmanim.sort((a,b) => {
-			return dayjs(a.date).isBefore(b.date) ? -1 : 1
+		yearZmanim = yearZmanim.sort((a, b) => {
+			return dayjs(a.date).isBefore(b.date) ? -1 : 1;
 		});
 	}
 </script>
@@ -118,7 +123,10 @@
 
 <h1>Shenk Shabbos Zmanim calculator</h1>
 
-<h2>Choose a date and number of weeks; the table will show the Candle lighting and havdala times for Shabbos and Yom Tov during that span</h2>
+<h2>
+	Choose a date and number of weeks; the table will show the Candle lighting and havdala times for
+	Shabbos and Yom Tov during that span
+</h2>
 
 <div id="content">
 	<div id="editSection">
@@ -154,9 +162,9 @@
 <style>
 	/* @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Hebrew&display=swap');
 	 */
-	 @import url('https://fonts.googleapis.com/css2?family=David+Libre&family=Noto+Serif+Hebrew&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=David+Libre&family=Noto+Serif+Hebrew&display=swap');
 
-	[lang=he] {
+	[lang='he'] {
 		font-family: 'David Libre', serif;
 		font-weight: bold;
 	}
@@ -183,7 +191,6 @@
 		border-collapse: collapse;
 		inline-size: 100%;
 		border: 1px solid black;
-		
 	}
 
 	.zmanTable tr {
