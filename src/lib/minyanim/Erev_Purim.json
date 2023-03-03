@@ -26,15 +26,20 @@
   "Maariv": [
     {
       "enabled": true,
-      "startTime": "7:40 PM",
-      "notes": "Megillah not before 7:54 PM"
+      "startTime": "6:20 PM",
+      "notes": "Megillah not before 6:30 PM"
     }
   ],
   "Megillah Only": [
     {
       "enabled": true,
-      "startTime": "9:00 PM",
-      "notes": "Location 5th floor"
+      "startTime": "8:45 PM",
+      "notes": "Heights lounge "
+    },
+    {
+      "startTime": "10:00 PM",
+      "enabled": true,
+      "notes": "Heights lounge "
     }
   ]
 }
