@@ -2,39 +2,39 @@
   "Shacharis": [
     {
       "enabled": true,
-      "startTime": "6:40 AM",
-      "notes": "Location 5th floor. Megillah not before 7:15 AM"
+      "startTime": "6:01 AM",
+      "notes": "Megillah approximately 6:35 AM"
     },
     {
       "enabled": true,
-      "startTime": "7:15 AM",
-      "notes": "Megillah not before 7:50 AM"
+      "startTime": "7:40 AM",
+      "notes": "Megillah approximately 8:15 AM"
     },
     {
       "enabled": true,
-      "startTime": "9:00 AM",
-      "notes": "Megillah not before 9:35 AM"
+      "startTime": "9:15 AM",
+      "notes": "Megillah approximately 9:50 AM"
     }
   ],
   "Mincha": [
     {
       "enabled": true,
-      "startTime": "1:35 PM",
-      "notes": "There will be Megillah after Mincha"
+      "startTime": "1:00 PM",
+      "notes": "There will be Megillah after Mincha, at 1:30 PM "
     },
     {
       "enabled": true,
       "startTime": "2:30 PM"
     },
     {
-      "enabled": true,
+      "enabled": false,
       "startTime": "6:50 PM"
     }
   ],
   "Maariv": [
     {
       "enabled": true,
-      "startTime": "10:00 PM"
+      "startTime": "8:00 PM"
     }
   ]
 }
