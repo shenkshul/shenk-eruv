@@ -34,7 +34,8 @@
       "enabled": true,
       "zmanBasedOn": "shkia",
       "minutesBeforeZman": 15,
-      "startTime": ""
+      "startTime": "",
+      "notes": "5th floor [press 3 in the elevator]"
     }
   ],
   "Maariv": [
