@@ -2,17 +2,17 @@
   "Shacharis": [
     {
       "startTime": "6:30 AM",
-      "enabled": true,
+      "enabled": false,
       "notes": ""
     },
     {
       "startTime": "7:30 AM",
-      "enabled": true,
+      "enabled": false,
       "notes": ""
     },
     {
       "startTime": "8:30 AM",
-      "enabled": true,
+      "enabled": false,
       "notes": ""
     },
     {
@@ -30,6 +30,16 @@
       "enabled": false,
       "startTime": "8:15 AM",
       "notes": "Slichos in Theater, followed by Shacharis in Sanctuary"
+    },
+    {
+      "startTime": "7:00 AM",
+      "enabled": true,
+      "notes": "Siyum following davening"
+    },
+    {
+      "startTime": "8:00 AM",
+      "enabled": true,
+      "notes": "Siyum following davening"
     }
   ],
   "Mincha": [
