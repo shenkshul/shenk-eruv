@@ -2,17 +2,17 @@
   "Shacharis": [
     {
       "startTime": "6:30 AM",
-      "enabled": false,
+      "enabled": true,
       "notes": ""
     },
     {
       "startTime": "7:30 AM",
-      "enabled": false,
+      "enabled": true,
       "notes": ""
     },
     {
       "startTime": "8:30 AM",
-      "enabled": false,
+      "enabled": true,
       "notes": ""
     },
     {
@@ -33,18 +33,18 @@
     },
     {
       "startTime": "7:00 AM",
-      "enabled": true,
+      "enabled": false,
       "notes": "Siyum following davening"
     },
     {
       "startTime": "8:00 AM",
-      "enabled": true,
+      "enabled": false,
       "notes": "Siyum following davening"
     }
   ],
   "Mincha": [
     {
-      "enabled": false,
+      "enabled": true,
       "zmanBasedOn": "shkia",
       "minutesBeforeZman": 15,
       "startTime": ""
@@ -53,7 +53,7 @@
   "Maariv": [
     {
       "startTime": "",
-      "enabled": false,
+      "enabled": true,
       "zmanBasedOn": "shkia",
       "rounding": "up"
     },
