@@ -1,7 +1,7 @@
 {
   "Shacharis": [
     {
-      "enabled": false,
+      "enabled": true,
       "startTime": "7:10 AM",
       "minutesEarlierOnRoshChodesh": 10
     },
@@ -13,7 +13,7 @@
   ],
   "Mincha": [
     {
-      "enabled": false,
+      "enabled": true,
       "startTime": "2:00 PM"
     },
     {
