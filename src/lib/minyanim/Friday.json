@@ -39,7 +39,7 @@
   "Candles": [
     {
       "startTime": "",
-      "enabled": false,
+      "enabled": true,
       "zmanBasedOn": "plagMincha",
       "notes": "not before",
       "minutesBeforeZman": 0
@@ -54,7 +54,7 @@
   "Mincha/Kabalat Shabbat": [
     {
       "startTime": "6:13 PM",
-      "enabled": false,
+      "enabled": true,
       "notes": "",
       "zmanBasedOn": "plagMincha",
       "minutesBeforeZman": 15
