@@ -18,24 +18,24 @@
       "enabled": true
     },
     {
-      "startTime": "5:55 PM",
+      "startTime": "6:45 PM",
       "enabled": true,
       "notes": "Also includes maariv "
     },
     {
-      "startTime": "7:40 PM",
+      "startTime": "7:50 PM",
       "enabled": true
     }
   ],
   "Maariv": [
     {
-      "startTime": "8:35 PM",
+      "startTime": "8:45 PM",
       "enabled": true
     }
   ],
   "Fast Ends": [
     {
-      "startTime": "8:50 PM",
+      "startTime": "9:03 PM",
       "enabled": true
     }
   ]
