@@ -44,31 +44,22 @@
   ],
   "Mincha": [
     {
-      "enabled": false,
+      "enabled": true,
       "zmanBasedOn": "shkia",
       "minutesBeforeZman": 15,
       "startTime": ""
-    },
-    {
-      "startTime": "1:45 PM",
-      "enabled": true
-    },
-    {
-      "startTime": "8:10 PM",
-      "enabled": true
     }
   ],
   "Maariv": [
     {
       "startTime": "",
-      "enabled": false,
+      "enabled": true,
       "zmanBasedOn": "shkia",
       "rounding": "up"
     },
     {
-      "enabled": true,
-      "startTime": "8:30 PM",
-      "notes": "Eicha approx. 8:45 PM"
+      "enabled": false,
+      "startTime": "10:00 PM"
     }
   ]
 }
