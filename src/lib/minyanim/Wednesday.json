@@ -2,44 +2,31 @@
   "Shacharis": [
     {
       "startTime": "6:30 AM",
-      "enabled": true,
-      "notes": ""
+      "enabled": false
     },
     {
       "startTime": "7:30 AM",
+      "enabled": false
+    },
+    {
+      "enabled": false,
+      "startTime": "8:30 AM"
+    },
+    {
       "enabled": true,
-      "notes": ""
+      "startTime": "6:00 AM",
+      "minutesEarlierOnRoshChodesh": 15,
+      "notes": "Slichos, folowed by Shacharis at 6:30"
+    },
+    {
+      "enabled": false,
+      "startTime": "7:10 AM",
+      "notes": "Slichos, folowed by Shacharis at 7:40"
     },
     {
       "startTime": "8:30 AM",
-      "enabled": true,
-      "notes": ""
-    },
-    {
       "enabled": false,
-      "startTime": "6:10 AM",
-      "minutesEarlierOnRoshChodesh": 15,
-      "notes": "Slichos, folowed by Shacharis"
-    },
-    {
-      "enabled": false,
-      "startTime": "7:25 AM",
-      "notes": "Slichos, folowed by Shacharis"
-    },
-    {
-      "enabled": false,
-      "startTime": "8:15 AM",
-      "notes": "Slichos in Theater, followed by Shacharis in Sanctuary"
-    },
-    {
-      "startTime": "7:00 AM",
-      "enabled": false,
-      "notes": "Siyum following davening"
-    },
-    {
-      "startTime": "8:00 AM",
-      "enabled": false,
-      "notes": "Siyum following davening"
+      "notes": "Slichos, followed by Shacharis at 9:00"
     }
   ],
   "Mincha": [
