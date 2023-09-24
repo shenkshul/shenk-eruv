@@ -3,31 +3,47 @@
   "Shacharis": [
     {
       "startTime": "8:00 AM",
-      "enabled": true
+      "enabled": true,
+      "notes": ""
+    },
+    {
+      "startTime": "8:45 AM",
+      "enabled": true,
+      "notes": "Hamelech"
+    },
+    {
+      "startTime": "11:30 AM",
+      "enabled": true,
+      "notes": "Yizkor"
+    },
+    {
+      "startTime": "11:50 AM",
+      "enabled": true,
+      "notes": "Mussaf"
     }
   ],
   "Mincha": [
     {
-      "startTime": "4:15 PM",
+      "startTime": "4:25 PM",
       "enabled": true
     }
   ],
   "Neila": [
     {
-      "startTime": "5:30 PM",
+      "startTime": "5:45 PM",
       "enabled": true,
       "notes": "Approximately "
     }
   ],
   "Maariv": [
     {
-      "startTime": "7:12 PM",
+      "startTime": "7:28 PM",
       "enabled": true
     }
   ],
   "Fast Ends": [
     {
-      "startTime": "7:12 PM",
+      "startTime": "7:28 PM",
       "enabled": true
     }
   ]
