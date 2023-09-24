@@ -8,15 +8,15 @@
   ],
   "Shacharis": [
     {
-      "startTime": "6:15 AM",
-      "enabled": true
-    },
-    {
       "startTime": "7:15 AM",
       "enabled": true
     },
     {
       "startTime": "8:15 AM",
+      "enabled": true
+    },
+    {
+      "startTime": "9:15 AM",
       "enabled": true
     }
   ],
