@@ -1,19 +1,19 @@
 {
   "Shacharis": [
     {
-      "startTime": "6:30 AM",
-      "enabled": false
+      "startTime": "6:25 AM",
+      "enabled": true
     },
     {
-      "startTime": "7:30 AM",
-      "enabled": false
-    },
-    {
-      "enabled": false,
-      "startTime": "8:30 AM"
+      "startTime": "7:25 AM",
+      "enabled": true
     },
     {
       "enabled": true,
+      "startTime": "8:25 AM"
+    },
+    {
+      "enabled": false,
       "startTime": "6:00 AM",
       "minutesEarlierOnRoshChodesh": 15,
       "notes": "Slichos, folowed by Shacharis at 6:30"
