@@ -1,7 +1,7 @@
 {
   "Shacharis": [
     {
-      "enabled": false,
+      "enabled": true,
       "startTime": "6:30 AM",
       "minutesEarlierOnRoshChodesh": 15
     },
@@ -24,7 +24,7 @@
       "notes": "Slichos, folowed by Shacharis at 6:25"
     },
     {
-      "startTime": "7:10 AM",
+      "startTime": "8:00 AM",
       "enabled": true,
       "notes": "Slichos, followed by Shachris at 7:40"
     }
