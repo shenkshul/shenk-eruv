@@ -14,19 +14,19 @@
       "startTime": "8:30 AM"
     },
     {
-      "startTime": "8:30 AM",
-      "enabled": false,
-      "notes": "Slichos, folowed by Shacharis at 9:00 AM"
-    },
-    {
-      "startTime": "6:00 AM",
+      "startTime": "8:00 AM",
       "enabled": true,
-      "notes": "Slichos, folowed by Shacharis at 6:25"
+      "notes": ""
     },
     {
       "startTime": "8:00 AM",
-      "enabled": true,
+      "enabled": false,
       "notes": "Slichos, followed by Shachris at 7:40"
+    },
+    {
+      "startTime": "6:00 AM",
+      "enabled": false,
+      "notes": "Slichos, folowed by Shacharis at 6:25"
     }
   ],
   "Mincha": [
