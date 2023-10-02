@@ -6,11 +6,11 @@
     },
     {
       "startTime": "7:30 AM",
-      "enabled": true
+      "enabled": false
     },
     {
       "enabled": true,
-      "startTime": "8:30 AM"
+      "startTime": "8:00 AM"
     },
     {
       "enabled": false,
