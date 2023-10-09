@@ -2,20 +2,20 @@
   "Shacharis": [
     {
       "enabled": true,
-      "startTime": "6:30 AM",
+      "startTime": "6:25 AM",
       "minutesEarlierOnRoshChodesh": 15
     },
     {
-      "enabled": false,
-      "startTime": "7:30 AM"
+      "enabled": true,
+      "startTime": "7:25 AM"
     },
     {
-      "enabled": false,
-      "startTime": "8:30 AM"
+      "enabled": true,
+      "startTime": "8:25 AM"
     },
     {
       "startTime": "8:00 AM",
-      "enabled": true,
+      "enabled": false,
       "notes": ""
     },
     {
