@@ -44,10 +44,6 @@
       "enabled": true,
       "zmanBasedOn": "shkia",
       "rounding": "up"
-    },
-    {
-      "enabled": false,
-      "startTime": "10:00 PM"
     }
   ]
 }
