@@ -1,34 +1,24 @@
 {
   "Shacharis": [
     {
-      "enabled": false,
-      "startTime": "7:25 AM",
+      "enabled": true,
+      "startTime": "6:30 AM",
+      "minutesEarlierOnRoshChodesh": ""
+    },
+    {
+      "startTime": "7:30 AM",
+      "enabled": true,
       "notes": ""
     },
     {
       "enabled": true,
-      "startTime": "6:30 AM",
-      "minutesEarlierOnRoshChodesh": 15
-    },
-    {
-      "enabled": false,
       "startTime": "8:30 AM",
       "notes": ""
     },
     {
-      "enabled": false,
+      "enabled": true,
       "startTime": "9:15 AM",
       "notes": ""
-    },
-    {
-      "startTime": "8:00 AM",
-      "enabled": true,
-      "notes": ""
-    },
-    {
-      "startTime": "7:10 AM",
-      "enabled": false,
-      "notes": "Slichos, folowed by Shacharis"
     }
   ],
   "Candles": [
@@ -48,7 +38,7 @@
   ],
   "Mincha/Kabalat Shabbat": [
     {
-      "startTime": "6:13 PM",
+      "startTime": "",
       "enabled": false,
       "notes": "",
       "zmanBasedOn": "plagMincha",
