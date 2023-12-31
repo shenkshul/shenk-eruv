@@ -6,22 +6,22 @@
     },
     {
       "startTime": "7:30 AM",
-      "enabled": false
-    },
-    {
-      "enabled": false,
-      "startTime": "8:30 AM"
+      "enabled": true
     },
     {
       "enabled": true,
-      "startTime": "8:00 AM",
-      "minutesEarlierOnRoshChodesh": 15,
-      "notes": "Slichos, folowed by Shacharis at 6:30"
+      "startTime": "8:30 AM"
     },
     {
       "enabled": false,
       "startTime": "7:10 AM",
       "notes": "Slichos, folowed by Shacharis at 7:40"
+    },
+    {
+      "enabled": false,
+      "startTime": "8:00 AM",
+      "minutesEarlierOnRoshChodesh": 1,
+      "notes": "Slichos, folowed by Shacharis at 6:30"
     },
     {
       "startTime": "8:30 AM",
@@ -43,10 +43,6 @@
       "enabled": true,
       "zmanBasedOn": "shkia",
       "rounding": "up"
-    },
-    {
-      "enabled": false,
-      "startTime": "10:00 PM"
     }
   ]
 }
