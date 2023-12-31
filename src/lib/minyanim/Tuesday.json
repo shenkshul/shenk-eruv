@@ -5,12 +5,12 @@
       "enabled": true
     },
     {
-      "startTime": "8:00 AM",
+      "startTime": "7:30 AM",
       "enabled": true
     },
     {
-      "enabled": false,
-      "startTime": "8:25 AM"
+      "enabled": true,
+      "startTime": "8:30 AM"
     },
     {
       "enabled": false,
@@ -35,10 +35,6 @@
       "zmanBasedOn": "shkia",
       "minutesBeforeZman": 15,
       "startTime": ""
-    },
-    {
-      "startTime": "7:20 PM",
-      "enabled": false
     }
   ],
   "Maariv": [
@@ -47,10 +43,6 @@
       "enabled": true,
       "zmanBasedOn": "shkia",
       "rounding": "up"
-    },
-    {
-      "enabled": false,
-      "startTime": "10:00 PM"
     }
   ]
 }
