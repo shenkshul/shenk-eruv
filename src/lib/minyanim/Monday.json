@@ -26,7 +26,8 @@
     },
     {
       "startTime": "9:15 AM",
-      "enabled": true
+      "enabled": true,
+      "notes": "Sunday Schedule for Legal Holiday"
     }
   ],
   "Mincha": [
