@@ -3,12 +3,13 @@
     {
       "enabled": true,
       "startTime": "6:30 AM",
-      "minutesEarlierOnRoshChodesh": "",
+      "minutesEarlierOnRoshChodesh": 15,
       "notes": ""
     },
     {
       "startTime": "7:30 AM",
-      "enabled": false
+      "enabled": true,
+      "minutesEarlierOnRoshChodesh": 5
     },
     {
       "startTime": "8:30 AM",
