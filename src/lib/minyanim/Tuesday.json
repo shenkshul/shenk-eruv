@@ -3,7 +3,7 @@
     {
       "startTime": "6:30 AM",
       "enabled": true,
-      "minutesEarlierOnRoshChodesh": 5
+      "minutesEarlierOnRoshChodesh": 15
     },
     {
       "startTime": "7:30 AM",
