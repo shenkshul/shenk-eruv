@@ -2,21 +2,21 @@
   "Shacharis": [
     {
       "startTime": "6:30 AM",
-      "enabled": false,
+      "enabled": true,
       "minutesEarlierOnRoshChodesh": 15
     },
     {
       "startTime": "7:30 AM",
-      "enabled": false,
+      "enabled": true,
       "minutesEarlierOnRoshChodesh": 5
     },
     {
       "enabled": true,
       "startTime": "8:30 AM",
-      "notes": "Theater"
+      "notes": ""
     },
     {
-      "enabled": true,
+      "enabled": false,
       "startTime": "7:10 AM",
       "notes": ""
     },
@@ -28,7 +28,7 @@
     },
     {
       "startTime": "6:25 AM",
-      "enabled": true,
+      "enabled": false,
       "notes": ""
     }
   ],
