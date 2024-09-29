@@ -1,29 +1,34 @@
 {
   "Shacharis": [
     {
-      "enabled": true,
+      "enabled": false,
       "startTime": "6:30 AM",
       "minutesEarlierOnRoshChodesh": 15
     },
     {
-      "enabled": true,
+      "enabled": false,
       "startTime": "7:30 AM",
       "minutesEarlierOnRoshChodesh": 5
     },
     {
-      "enabled": true,
+      "enabled": false,
       "startTime": "8:30 AM",
       "minutesEarlierOnRoshChodesh": ""
     },
     {
-      "startTime": "8:00 AM",
-      "enabled": false,
-      "notes": "Slichos, followed by Shachris at 7:40"
+      "startTime": "6:00 AM",
+      "enabled": true,
+      "notes": "Slichos, folowed by Shacharis at 6:25"
     },
     {
-      "startTime": "6:00 AM",
-      "enabled": false,
-      "notes": "Slichos, folowed by Shacharis at 6:25"
+      "startTime": "7:10 AM",
+      "enabled": true,
+      "notes": "Slichos, followed by Shachris at 7:35"
+    },
+    {
+      "startTime": "8:30 AM",
+      "enabled": true,
+      "notes": "Slichos, followed by Shachris at 8:55 AM"
     }
   ],
   "Mincha": [
