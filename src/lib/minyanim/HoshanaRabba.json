@@ -9,10 +9,5 @@
       "enabled": true
     }
   ],
-  "Mincha": [
-    {
-      "startTime": "6:05 PM",
-      "enabled": true
-    }
-  ]
+  "Mincha": []
 }
