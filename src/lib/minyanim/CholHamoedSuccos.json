@@ -2,17 +2,17 @@
   "Shacharis": [
     {
       "startTime": "6:30 AM",
-      "enabled": true
+      "enabled": false
     },
     {
       "startTime": "8:00 AM",
-      "enabled": true
+      "enabled": false
     }
   ],
   "Mincha": [
     {
       "startTime": "",
-      "enabled": true,
+      "enabled": false,
       "zmanBasedOn": "shkia",
       "minutesBeforeZman": 15,
       "notes": "Maariv to follow "
