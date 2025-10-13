@@ -2,11 +2,11 @@
   "Shacharis": [
     {
       "startTime": "6:25 AM",
-      "enabled": true
+      "enabled": false
     },
     {
       "startTime": "8:15 AM",
-      "enabled": true
+      "enabled": false
     }
   ],
   "Mincha": []
